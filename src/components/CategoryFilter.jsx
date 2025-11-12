@@ -22,7 +22,7 @@ const CategoryFilter = ({ active_category, on_category_change, categories }) => 
   };
 
   return (
-    <div className="bg-curated-bg-light sticky top-[64px] sm:top-[72px] z-40">
+    <div className="bg-curated-bg-light">
       <div className="max-w-curated mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-start sm:justify-center gap-2 py-4 sm:py-6 overflow-x-auto scrollbar-hide">
           {categories.map((category) => {
