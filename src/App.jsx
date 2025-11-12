@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import BrowsePage from './pages/BrowsePage';
 import BlogPage from './pages/BlogPage';
+import BlogPostDetailPage from './pages/BlogPostDetailPage';
 import InfoPage from './pages/InfoPage';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/products/:id" element={<ProductDetailPage />} />
             <Route path="/browse" element={<BrowsePage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostDetailPage />} />
             <Route path="/info" element={<InfoPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>

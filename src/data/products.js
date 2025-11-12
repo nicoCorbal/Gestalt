@@ -6,7 +6,6 @@ export const monthly_featured_products = [
     brand: "Endgame Gear",
     category: "Gaming",
     price: 179,
-    image: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&h=800&fit=crop",
     is_monthly_featured: true,
     story: {
       title: "El mouse que los pros esconden",
@@ -27,7 +26,6 @@ export const monthly_featured_products = [
     brand: "Mode Designs",
     category: "Tech",
     price: 450,
-    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "El endgame del custom keyboard",
@@ -48,7 +46,6 @@ export const monthly_featured_products = [
     brand: "Able Carry",
     category: "Carry",
     price: 269,
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "La mochila de los nómadas reales",
@@ -69,7 +66,6 @@ export const monthly_featured_products = [
     brand: "Hoka",
     category: "Streetwear",
     price: 195,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "Trail runners que conquistaron Shibuya",
@@ -90,7 +86,6 @@ export const monthly_featured_products = [
     brand: "Arc'teryx Veilance",
     category: "Streetwear",
     price: 850,
-    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "Techwear sin logos",
@@ -111,7 +106,6 @@ export const monthly_featured_products = [
     brand: "Moondrop",
     category: "Tech",
     price: 319,
-    image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "Audiofilia accesible",
@@ -132,7 +126,6 @@ export const monthly_featured_products = [
     brand: "Eve",
     category: "Gaming",
     price: 799,
-    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "El monitor crowd-developed",
@@ -153,7 +146,6 @@ export const monthly_featured_products = [
     brand: "Corter Leather",
     category: "Carry",
     price: 140,
-    image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "Hecha a mano en Massachusetts",
@@ -174,7 +166,6 @@ export const monthly_featured_products = [
     brand: "Zojirushi",
     category: "Lifestyle",
     price: 38,
-    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "El termo japonés secreto",
@@ -195,7 +186,6 @@ export const monthly_featured_products = [
     brand: "Steelcase",
     category: "Tech",
     price: 549,
-    image: "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "La Herman Miller que nadie menciona",
@@ -216,7 +206,6 @@ export const monthly_featured_products = [
     brand: "Lady White Co.",
     category: "Streetwear",
     price: 198,
-    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "El hoodie de los diseñadores",
@@ -237,7 +226,6 @@ export const monthly_featured_products = [
     brand: "Norm Architects",
     category: "Lifestyle",
     price: 89,
-    image: "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: true,
     story: {
       title: "Arte sin ser pretencioso",
@@ -262,7 +250,6 @@ export const regular_products = [
     brand: "Gateron",
     category: "Gaming",
     price: 65,
-    image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: false,
     description: "Switches lineales pre-lubricados de fábrica. 55g actuation, nylon housing, stem POM. El switch que usan keyboard modders antes de custom lubing. Sonido profundo y smooth stock.",
     specs: {
@@ -277,7 +264,6 @@ export const regular_products = [
     brand: "3sixteen",
     category: "Streetwear",
     price: 88,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: false,
     description: "Heavyweight tee (230gsm) con cuello ribbed. Algodón compacto de Zimbabwe. Corte regular, pre-shrunk. De la marca que puso el selvedge denim en el mapa underground.",
     specs: {
@@ -292,7 +278,6 @@ export const regular_products = [
     brand: "Mechcables",
     category: "Tech",
     price: 85,
-    image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: false,
     description: "Cable coiled artesanal para teclados custom. Paracord sleeve, aviator connector, USB-C o mini. Hecho a mano en USA. Colores personalizables. Para completar el setup aesthetic.",
     specs: {
@@ -307,7 +292,6 @@ export const regular_products = [
     brand: "Oni Denim",
     category: "Streetwear",
     price: 295,
-    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: false,
     description: "Denim japonés irregular weave de 20oz. Fades únicos tipo 'slubby'. Sin lavar (raw). Para los que entienden que los mejores jeans tardan 6 meses en romperse correctamente.",
     specs: {
@@ -322,7 +306,6 @@ export const regular_products = [
     brand: "Schiit Audio",
     category: "Tech",
     price: 129,
-    image: "https://images.unsplash.com/photo-1598331668715-eeded1acc23f?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: false,
     description: "DAC USB de alto rendimiento. AKM4493 chip, señal balanceada. Para audiophiles con presupuesto. Hecho en California por gente que odia el audiophile snake oil. No BS, solo specs.",
     specs: {
@@ -337,7 +320,6 @@ export const regular_products = [
     brand: "Kapital",
     category: "Streetwear",
     price: 120,
-    image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: false,
     description: "Gorra workwear japonesa con boro stitching. Cada una envejece diferente. Kapital es la marca de denim que Visvim respeta. Weird, hermosa, cara.",
     specs: {
@@ -352,7 +334,6 @@ export const regular_products = [
     brand: "Lewitt",
     category: "Tech",
     price: 299,
-    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: false,
     description: "Condensador austriaco que compite con Neumanns de $1000. Capsula de 1 pulgada, SPL de 140dB. Para podcasters y músicos que research antes de comprar Shure por default.",
     specs: {
@@ -367,7 +348,6 @@ export const regular_products = [
     brand: "Baggu",
     category: "Carry",
     price: 18,
-    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&h=800&fit=crop&q=80",
     is_monthly_featured: false,
     description: "La bolsa reusable que todos copian. Nylon reciclado, soporta 22kg, se pliega en nada. Disponible en 100+ prints. Sostenibilidad real sin virtue signaling.",
     specs: {
@@ -388,7 +368,6 @@ export const collections = [
     name: "Setup del Insider",
     product_count: 4,
     description: "Gaming gear que los pros no comparten.",
-    image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&h=600&fit=crop",
     product_ids: [1, 2, 7, 15]
   },
   {
@@ -396,7 +375,6 @@ export const collections = [
     name: "Grails Silenciosos",
     product_count: 5,
     description: "Streetwear para los que saben.",
-    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&h=600&fit=crop",
     product_ids: [4, 5, 11, 14, 16]
   },
   {
@@ -404,7 +382,6 @@ export const collections = [
     name: "EDC No Básico",
     product_count: 4,
     description: "Carry gear que nadie tiene.",
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=600&fit=crop",
     product_ids: [3, 6, 8, 9]
   },
   {
@@ -412,7 +389,6 @@ export const collections = [
     name: "WFH de Culto",
     product_count: 4,
     description: "Workspace para nerds de verdad.",
-    image: "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=800&h=600&fit=crop",
     product_ids: [2, 10, 12, 17]
   },
   {
@@ -420,7 +396,6 @@ export const collections = [
     name: "Audiofilia Entry",
     product_count: 3,
     description: "Sonido real sin break the bank.",
-    image: "https://images.unsplash.com/photo-1545828103-c7c5e58d6fd3?w=800&h=600&fit=crop",
     product_ids: [6, 17, 19]
   },
   {
@@ -428,7 +403,6 @@ export const collections = [
     name: "Japanese Quality",
     product_count: 4,
     description: "Calidad nipona que vale la pena.",
-    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&h=600&fit=crop",
     product_ids: [4, 9, 16, 18]
   }
 ];
