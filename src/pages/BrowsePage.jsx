@@ -39,8 +39,8 @@ const BrowsePage = () => {
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-curated-bg to-curated-bg-light">
                   <span className="text-[40px] sm:text-[48px] font-bold text-curated-text-muted opacity-20">{collection.product_count}</span>
                 </div>
-                <div className="absolute top-4 right-4 bg-white px-3 py-2 rounded-full border-2 border-curated-text shadow-lg">
-                  <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wide">{collection.product_count} productos</span>
+                <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-curated-border">
+                  <span className="text-[10px] font-medium text-curated-text-muted">{collection.product_count} productos</span>
                 </div>
               </div>
 
