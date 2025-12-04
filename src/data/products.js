@@ -1,399 +1,419 @@
-// Productos del Mes - 12 productos con storytelling profundo
+// Productos del Mes - 12 productos icónicos con storytelling
 export const monthly_featured_products = [
   {
     id: 1,
-    name: "Mouse Endgame Gear OP1 8K",
-    brand: "Endgame Gear",
-    category: "Gaming",
-    price: 179,
+    name: "AirPods Pro 2",
+    brand: "Apple",
+    category: "Tech",
+    price: 249,
     is_monthly_featured: true,
     is_new: true,
     is_staff_pick: true,
+    image: "/public/productos/airpods2.jpeg",
     story: {
-      title: "El mouse que los pros esconden",
-      philosophy: "Endgame Gear es una marca alemana que solo conocen los esports nerds de verdad. El OP1 8K polling rate—8000Hz de actualización. Latencia imperceptible. 55g sin agujeros. Switches ópticos Kailh GM 8.0 que duran 80 millones de clics. Es ingeniería obsesiva para el 0.1%.",
+      title: "El sonido que desaparece",
+      philosophy: "Apple redefinió los auriculares inalámbricos. Los AirPods Pro 2 con chip H2 ofrecen cancelación de ruido adaptativa, audio espacial personalizado, y una integración perfecta con el ecosistema Apple. No son solo auriculares, son una extensión de tu dispositivo.",
       gestalt_principle: "Figura y Fondo",
-      why_matters: "La mayoría usa Logitech, Razer, cosas mainstream. El OP1 es lo que usan jugadores Radiant de Valorant que no quieren que sepas su secreto. 8K polling elimina micro-stuttering. Sensor PAW3395 customizado. Coating UV que no se desgasta. Si sabes, sabes.",
-      craft_story: "Hecho en cooperación con la comunidad FPS alemana. Diseño modular—cambia switches sin soldar. Cable paracord de fábrica. Pies PTFE vírgenes. Firmware open-source. Solo se vende en su web, sin distribuidores. Stock limitado siempre."
+      why_matters: "La cancelación de ruido activa te aísla del mundo cuando lo necesitas. El modo transparencia te reconecta instantáneamente. Es la dualidad perfecta para la vida moderna.",
+      craft_story: "Diseñados en California. Chip H2 con machine learning en tiempo real. Driver personalizado de baja distorsión. Amplificador de alta impedancia. Estuche con carga MagSafe, USB-C y Apple Watch."
     },
     specs: {
-      weight: "55g",
-      polling_rate: "8000Hz",
-      sensor: "PAW3395"
+      chip: "Apple H2",
+      noise_cancellation: "Adaptativa 2x",
+      battery: "6h (30h con estuche)"
     }
   },
   {
     id: 2,
-    name: "Teclado Mode Sonnet",
-    brand: "Mode Designs",
+    name: "Sony WH-1000XM5",
+    brand: "Sony",
     category: "Tech",
-    price: 450,
+    price: 399,
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: true,
+    image: "/public/productos/sonywh1000.avif",
     story: {
-      title: "El endgame del custom keyboard",
-      philosophy: "Mode Designs es una boutique de LA que vende teclados por group buy—produces lo que vendes, nada más. El Sonnet tiene mounting system de gasket (suspensión flotante), bloque de aluminio CNC de 3kg, PCB flex-cut. No es un teclado, es un statement piece.",
+      title: "El estándar de la industria",
+      philosophy: "Sony lleva décadas perfeccionando el audio. Los XM5 representan la culminación de esa obsesión: 8 micrófonos para la mejor cancelación de ruido del mercado, drivers de 30mm con diafragma de fibra de carbono, y un diseño que por fin es elegante.",
       gestalt_principle: "Continuidad",
-      why_matters: "Los entusiastas de r/MechanicalKeyboards gastan $2000+ en customs. El Sonnet a $450 es 'accesible' para este nicho. El typing feel es incomparable—bounce perfecto, sonido thocky sin ser hueco. Acepta switches de 3-pin y 5-pin. Hot-swap, obviamente.",
-      craft_story: "CNC machined de un bloque sólido de aluminio 6063. Anodizado electrolítico tipo II. Plate de FR4, aluminio, o polycarbonate (tu eliges). Compatible con QMK/VIA. Group buys se agotan en horas. Espera de entrega: 6-12 meses."
+      why_matters: "30 horas de batería. Carga rápida de 3 minutos = 3 horas. Multipoint para conectar dos dispositivos. Son los auriculares que usan ingenieros de sonido en sus vuelos.",
+      craft_story: "Procesador V1 integrado. Audio LDAC de alta resolución. Speak-to-Chat que pausa la música cuando hablas. Plegado plano para viajar. Fabricados con plásticos reciclados."
     },
     specs: {
-      layout: "75% (84 keys)",
-      mounting: "Gasket",
-      material: "Aluminio CNC"
+      drivers: "30mm fibra carbono",
+      battery: "30 horas",
+      weight: "250g"
     }
   },
   {
     id: 3,
-    name: "Mochila Able Carry Max",
-    brand: "Able Carry",
-    category: "Carry",
-    price: 269,
+    name: "Stanley Quencher H2.0",
+    brand: "Stanley",
+    category: "Lifestyle",
+    price: 45,
     is_monthly_featured: true,
     is_new: true,
     is_staff_pick: false,
+    image: "/public/productos/stanley.webp",
     story: {
-      title: "La mochila de los nómadas reales",
-      philosophy: "Able Carry es canadiense, fundada por diseñadores frustrados con Arc'teryx y Peak Design. La Max usa X-Pac VX21—tela de velas de yate. Impermeabilizable sin coating (que se degrada). Roll-top con cierre magnético. Para los que viven entre Airbnbs.",
+      title: "El tumbler que rompió TikTok",
+      philosophy: "Stanley existe desde 1913 haciendo termos para obreros. En 2023, el Quencher se volvió viral. No es hype vacío: 40oz de capacidad, doble pared al vacío, base que cabe en portavasos. Funcionalidad que se convirtió en fenómeno cultural.",
       gestalt_principle: "Simplicidad (Prägnanz)",
-      why_matters: "30L expandible a 40L. Laptop de 17 pulgadas cabe. Acceso rápido lateral con YKK AquaGuard. Correas magnéticas que no cuelgan. La usas 3 años diario y se ve nueva. Minimalista pero no simplista—cada detalle pensado para vivir ligero.",
-      craft_story: "X-Pac VX21 de Dimension Polyant (USA). Cremalleras YKK RC Fuse. Hardware Woojin y Duraflex. Costura triple en puntos de estrés. Hecha en Vietnam con auditorías Fair Trade. Garantía limitada lifetime. Reparaciones gratuitas primer año."
+      why_matters: "Mantiene hielo por 11 horas. El asa ergonómica permite cargarlo todo el día. La tapa FlowState tiene tres posiciones. Es el accesorio de hidratación definitivo.",
+      craft_story: "Acero inoxidable 18/8 reciclado. Libre de BPA. Apto para lavavajillas. Garantía de por vida. Colores de edición limitada que se agotan en minutos."
     },
     specs: {
-      capacity: "30-40L expandible",
-      material: "X-Pac VX21",
-      waterproof: "Sí (sin coating)"
+      capacity: "40oz (1.18L)",
+      retention: "11h frío / 7h caliente",
+      material: "Acero 18/8"
     }
   },
   {
     id: 4,
-    name: "Sneakers Hoka Mafate Speed 4",
-    brand: "Hoka",
+    name: "Salomon XT-6 GTX",
+    brand: "Salomon",
     category: "Streetwear",
-    price: 195,
+    price: 230,
     is_monthly_featured: true,
-    is_new: false,
+    is_new: true,
     is_staff_pick: true,
+    image: "/public/productos/salomon.webp",
     story: {
-      title: "Trail runners que conquistaron Shibuya",
-      philosophy: "Hoka empezó haciendo zapatillas ultra-amortiguadas para ultramaratones. Los japoneses las adoptaron para streetwear antes que nadie. Las Mafate Speed 4 tienen suela Vibram Megagrip, upper de malla ripstop, y ese aesthetic maximalista que Salomon desearía tener.",
+      title: "Del trail a la pasarela",
+      philosophy: "Salomon lleva décadas equipando a ultramaratonistas. Las XT-6 nacieron para carreras de montaña extremas. Luego, el mundo de la moda las descubrió. Hoy son el calzado técnico que ves en París y Tokyo. Rendimiento real convertido en estética.",
       gestalt_principle: "Proximidad",
-      why_matters: "No son Jordan, no son Yeezy. Son para los que entienden que el real drip viene del trail running gear. La amortiguación es absurda—caminar en nubes. El colorway 'Outer Space' es puro gorpcore refined. Las ves en Tokio, raramente en CDMX.",
-      craft_story: "Diseñadas en Francia, probadas en los Alpes. Suela Vibram con patrón multi-direccional. Meta-Rocker geometry para eficiencia energética. Peso de 291g (super light para maximalistas). Ediciones limitadas en colaboración con Engineered Garments."
+      why_matters: "Gore-Tex para impermeabilidad total. Chassis Advanced para estabilidad. Quicklace para ajuste instantáneo. Funcionan igual en senderos alpinos que en calles mojadas.",
+      craft_story: "Diseñadas en los Alpes franceses. Suela Contagrip para cualquier terreno. Upper de malla reforzada. Las zapatillas que llevan corredores de UTMB y directores creativos por igual."
     },
     specs: {
-      drop: "5mm",
-      weight: "291g",
-      sole: "Vibram Megagrip"
+      material: "Gore-Tex + malla técnica",
+      sole: "Contagrip MA",
+      features: "Quicklace, impermeables"
     }
   },
   {
     id: 5,
-    name: "Chamarra Veilance Nemis",
-    brand: "Arc'teryx Veilance",
-    category: "Streetwear",
-    price: 850,
+    name: "Kindle Paperwhite",
+    brand: "Amazon",
+    category: "Tech",
+    price: 149,
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: false,
+    image: "/public/productos/kindle.jpg",
     story: {
-      title: "Techwear sin logos",
-      philosophy: "Veilance es la línea urbana de Arc'teryx—misma tecnología, cero branding visible. La Nemis es una parka minimalista con Gore-Tex Pro, sellado total, capucha escondida en el cuello. Es la chamarra que usan arquitectos en Copenhague y diseñadores en Seúl.",
-      gestalt_principle: "Similitud",
-      why_matters: "Resistente a viento, lluvia, nieve. Respirable. Corte que funciona con hoodie o blazer debajo. Los que saben, reconocen el corte, la caída del fabric, las cremalleras Vislon. No necesitas un logo—la calidad habla.",
-      craft_story: "Gore-Tex Pro 3L (lo más premium de Gore). Sellado WaterTight. Costuras termo-pegadas. Made in Canada o China con QC idéntico. Garantía limitada lifetime. Programa de reparación ReBird. Precio de reventa post-wear: 70% del original."
+      title: "Leer sin distracciones",
+      philosophy: "En un mundo de notificaciones infinitas, el Kindle es un oasis. Pantalla e-ink de 300ppi que se lee como papel. Sin apps, sin redes sociales. Solo tú y las palabras. Es tecnología que te desconecta para reconectarte con lo que importa.",
+      gestalt_principle: "Figura y Fondo",
+      why_matters: "Luz frontal ajustable para leer en cualquier condición. Resistente al agua para la playa o la bañera. Semanas de batería. Miles de libros en 205 gramos.",
+      craft_story: "Pantalla Carta 1200 de E Ink. 8GB o 32GB de almacenamiento. USB-C. Audible integrado con Bluetooth. Hecho con 60% de plástico reciclado post-consumo."
     },
     specs: {
-      material: "Gore-Tex Pro 3L",
-      waterproof: "40,000mm",
-      breathability: "40,000g"
+      screen: "6.8\" E-ink 300ppi",
+      storage: "8GB / 32GB",
+      battery: "10 semanas"
     }
   },
   {
     id: 6,
-    name: "IEMs Moondrop Blessing 3",
-    brand: "Moondrop",
+    name: "Apple Watch Series 9",
+    brand: "Apple",
     category: "Tech",
-    price: 319,
+    price: 399,
     is_monthly_featured: true,
     is_new: true,
     is_staff_pick: true,
+    image: "/public/productos/apple-watch-series-9.png",
     story: {
-      title: "Audiofilia accesible",
-      philosophy: "Moondrop es chino, pero respetado en Head-Fi. Los Blessing 3 tienen 4BA + 1DD (4 balanced armatures + 1 dynamic driver). Curva Harman target tuning. Soundstage amplio, separación de instrumentos quirúrgica. Para los que dejaron Spotify y migraron a FLAC.",
-      gestalt_principle: "Figura y Fondo",
-      why_matters: "AirPods son convenientes. Estos son revelativos—escuchas detalles que no sabías que existían. Cable desmontable (2-pin 0.78mm). Shells de resina con faceplate metálico. Impedancia baja (14.8Ω) para usarlos con cualquier source. Compiten con IEMs de $1000+.",
-      craft_story: "Drivers balanceados Knowles. Crossover pasivo optimizado. Nozzle intercambiable (3 tamaños). Cables de cobre plateado (silver-plated copper). Estuche pelican incluido. Fabricado en Shenzhen con tolerancias de 0.01mm. Mediciones en Crinacle's graph database."
+      title: "Tu salud en tu muñeca",
+      philosophy: "El Apple Watch evolucionó de gadget a dispositivo médico. ECG, oxígeno en sangre, detección de caídas, crash detection. Chip S9 con doble toque. No es un reloj inteligente, es un guardián silencioso de tu bienestar.",
+      gestalt_principle: "Continuidad",
+      why_matters: "Registro de sueño. Recordatorios para moverte. Entrenamientos detallados. Llamadas de emergencia. Todo en un dispositivo que además te dice la hora y se ve elegante.",
+      craft_story: "Aluminio o acero inoxidable. Titanio en Ultra. Cristal Ion-X o zafiro. Carga magnética. Carbono neutro en combinaciones seleccionadas. Correas intercambiables infinitas."
     },
     specs: {
-      drivers: "4BA + 1DD híbrido",
-      impedance: "14.8Ω",
-      cable: "Desmontable 2-pin"
+      chip: "Apple S9",
+      display: "OLED Always-On",
+      features: "ECG, SpO2, Temperatura"
     }
   },
   {
     id: 7,
-    name: "Monitor Eve Spectrum 4K",
-    brand: "Eve",
-    category: "Gaming",
-    price: 799,
+    name: "Logitech MX Master 3S",
+    brand: "Logitech",
+    category: "Tech",
+    price: 99,
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: false,
+    image: "/public/productos/logitech.webp",
     story: {
-      title: "El monitor crowd-developed",
-      philosophy: "Eve es una startup que diseña productos votados por su comunidad. El Spectrum 4K 144Hz usa panel LG IPS con 98% DCI-P3. HDMI 2.1, DisplayPort 1.4a, USB-C con 100W PD. Es lo que pasa cuando gamers y diseñadores colaboran sin compromisos corporativos.",
-      gestalt_principle: "Continuidad",
-      why_matters: "La mayoría de marcas lanzan specs mediocres. Eve preguntó a su comunidad qué querían—y lo construyeron. 144Hz nativo en 4K (sin overclock). HDR600 certificado. 1ms GTG. VRR premium (G-SYNC + FreeSync). Diseño sin logos, sin RGB innecesario. Clean.",
-      craft_story: "Panel LG Nano IPS 10-bit. Backlight FALD (Full Array Local Dimming). Base con cable management integrado. Montaje VESA 100x100. Garantía de 3 años con dead pixel replacement desde el primero. Shipping desde Alemania. Stock perpetuamente limitado."
+      title: "El mouse de los profesionales",
+      philosophy: "El MX Master es el mouse que usan diseñadores, desarrolladores y creadores. Scroll electromagnético MagSpeed. Sensor de 8000 DPI en cualquier superficie, incluso cristal. Ergonomía perfeccionada en 3 generaciones.",
+      gestalt_principle: "Similitud",
+      why_matters: "Flow permite controlar 3 computadoras con un solo mouse. Botones programables para cada app. 70 días de batería. Carga USB-C. Es la herramienta, no el obstáculo.",
+      craft_story: "Rueda de acero con imanes. Clicks silenciosos 90% más quiet. Hecho con plástico reciclado. Compatible con Logi Options+ para personalización profunda. Garantía de 2 años."
     },
     specs: {
-      resolution: "4K (3840x2160)",
-      refresh_rate: "144Hz",
-      panel: "IPS 10-bit"
+      sensor: "8000 DPI",
+      battery: "70 días",
+      connectivity: "Bluetooth + USB"
     }
   },
   {
     id: 8,
-    name: "Cartera Corter Leather Classic",
-    brand: "Corter Leather",
-    category: "Carry",
-    price: 140,
+    name: "Arc'teryx Atom Hoody",
+    brand: "Arc'teryx",
+    category: "Streetwear",
+    price: 300,
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: true,
+    image: "/public/productos/arcteryx.jpg",
     story: {
-      title: "Hecha a mano en Massachusetts",
-      philosophy: "Corter Leather es un one-man operation en Boston. Cada cartera es cortada, cosida, y terminada por el dueño. Cuero Horween Chromexcel de 4-5oz. No hay dos iguales. Compras directamente del artesano—no hay intermediarios, no hay markup corporativo.",
+      title: "Ingeniería de montaña para la ciudad",
+      philosophy: "Arc'teryx nació en la costa de British Columbia, donde los alpinistas exigen lo mejor. La Atom Hoody es aislamiento sintético Coreloft en un diseño minimalista. Ligera, packable, y más versátil que cualquier otra chaqueta que tengas.",
       gestalt_principle: "Cierre",
-      why_matters: "Esta cartera carga 6-8 tarjetas. Desarrolla pátina única basada en tu uso. Las costuras son saddle-stitched (costura de talabartería)—si un hilo se rompe, los demás aguantan. En 10 años se ve mejor que nueva. Es tuya, literalmente.",
-      craft_story: "Cuero Horween de curtido vegetal. Hilo encerado Tiger Thread. Costura doble pasada. Acabado con Obenauf's LP. Hecha en lotes pequeños. Tiempo de espera: 2-4 semanas. Sin devoluciones (porque sabes lo que estás comprando). Instagram: @corterleather."
+      why_matters: "60g de Coreloft que sigue abrigando mojado. Paneles laterales Fortius Air para transpirabilidad. Capucha que cabe bajo el casco. Es la capa intermedia definitiva.",
+      craft_story: "Diseñada en Canadá. Costuras selladas. Cremalleras YKK impermeables. La marca que visten alpinistas profesionales y arquitectos por igual. Garantía de por vida."
     },
     specs: {
-      capacity: "6-8 tarjetas",
-      leather: "Horween Chromexcel",
-      construction: "Saddle-stitched"
+      insulation: "Coreloft 60g",
+      weight: "340g",
+      features: "Packable, transpirable"
     }
   },
   {
     id: 9,
-    name: "Botella Zojirushi SM-SE",
-    brand: "Zojirushi",
+    name: "Herman Miller Aeron",
+    brand: "Herman Miller",
     category: "Lifestyle",
-    price: 38,
+    price: 1395,
     is_monthly_featured: true,
-    is_new: true,
+    is_new: false,
     is_staff_pick: true,
+    image: "/public/productos/hermanmiller.webp",
     story: {
-      title: "El termo japonés secreto",
-      philosophy: "Zojirushi es una marca japonesa de 1918 que nadie en occidente conoce (excepto los que saben). El SM-SE mantiene líquidos calientes por 12 horas, fríos por 24. Vacío dual-wall de acero. Tapa con lock que NO derrama. Stanley quién?",
-      gestalt_principle: "Continuidad",
-      why_matters: "Es pequeño (480ml), cabe en cualquier bolsillo de mochila. Boca ancha (4.5cm) para llenarlo fácil. Interior con coating fluoropolímero (resistente a olores). Pesa 190g vacío. Lo usas para matcha, cold brew, lo que sea. Dura décadas—literal.",
-      craft_story: "Acero inoxidable 18/8. Tecnología SlickSteel (interior super liso). Sin BPA, ftalatos, lead. Hecho en Japón, no en China. Disponible en 6 colores mate. Se vende principalmente en tiendas asiáticas. Amazon Japón. Si lo ves, cómpralo."
+      title: "El trono del trabajo moderno",
+      philosophy: "La Aeron no es una silla, es un statement de que tu cuerpo importa. Diseñada por Bill Stumpf y Don Chadwick en 1994, revolucionó la ergonomía. Sin espuma que se degrada, solo Pellicle mesh que respira y se adapta. Está en el MoMA por algo.",
+      gestalt_principle: "Figura y Fondo",
+      why_matters: "PostureFit SL para soporte lumbar ajustable. 8Z Pellicle con 8 zonas de tensión. Brazos 4D. Reclinación sincronizada. Es la silla que usan en Pixar, Google y estudios de arquitectura de todo el mundo.",
+      craft_story: "Diseño estadounidense. 12 años de garantía. 90% reciclable al final de su vida. Tres tallas (A, B, C) para diferentes cuerpos. La inversión que protege tu espalda durante décadas."
     },
     specs: {
-      capacity: "480ml",
-      retention: "12h caliente / 24h frío",
-      weight: "190g"
+      warranty: "12 años",
+      adjustments: "Lumbar, brazos 4D, altura, reclinación",
+      material: "Pellicle mesh 8Z"
     }
   },
   {
     id: 10,
-    name: "Silla Steelcase Series 2",
-    brand: "Steelcase",
-    category: "Tech",
-    price: 549,
+    name: "tomtoc Mochila Compacta 24L",
+    brand: "tomtoc",
+    category: "Carry",
+    price: 60,
     is_monthly_featured: true,
-    is_new: false,
+    is_new: true,
     is_staff_pick: false,
+    image: "/public/productos/tomtoc.jpg",
     story: {
-      title: "La Herman Miller que nadie menciona",
-      philosophy: "Steelcase es el competidor directo de Herman Miller—misma calidad, menos hype, menos precio. La Series 2 tiene soporte lumbar ajustable en 4D, brazos 4D, reclinación sincronizada. Es la silla de oficinas corporativas serias—donde la productividad importa más que el flex.",
-      gestalt_principle: "Figura y Fondo",
-      why_matters: "Todos compran Aeron o Embody. La Series 2 es mejor value. Respaldo de malla con frame de polímero. Ajustes intuitivos sin sacrificar opciones. Pesa 22kg (sólida). Certificación Cradle to Cradle Silver. 12 años de garantía. La compras una vez.",
-      craft_story: "Fabricada en Michigan, USA. 98% reciclable. Espuma de asiento con certificación GREENGUARD (sin VOCs). Ensamblaje sin herramientas. Base de aluminio reciclado. Programa Trade-In al final de vida útil. Usada en Google, Microsoft, etc."
+      title: "La mochila profesional sin pretensiones",
+      philosophy: "tomtoc nació de ex-ingenieros de Apple obsesionados con la protección. Esta mochila de 24L es el equilibrio perfecto entre capacidad y portabilidad. Compartimento acolchado para portátil de 15.6\", organización inteligente, y diseño que funciona igual en la oficina que en el metro.",
+      gestalt_principle: "Simplicidad (Prägnanz)",
+      why_matters: "Pasacables para auriculares. Bolsillo de acceso rápido. Compartimentos separados para trabajo y vida. Panel trasero transpirable. Es la mochila que no grita pero cumple.",
+      craft_story: "Nylon resistente al agua. Cremalleras YKK. Forro suave que protege tu laptop. Diseño que conquistó Amazon y r/onebag. La alternativa inteligente a mochilas de $200."
     },
     specs: {
-      warranty: "12 años",
-      adjustments: "Lumbar 4D + brazos 4D",
-      recyclability: "98%"
+      capacity: "24L",
+      laptop: "Hasta 15.6\"",
+      features: "Pasacables, resistente al agua"
     }
   },
   {
     id: 11,
-    name: "Hoodie Lady White Co.",
-    brand: "Lady White Co.",
-    category: "Streetwear",
-    price: 198,
+    name: "Le Creuset Dutch Oven",
+    brand: "Le Creuset",
+    category: "Lifestyle",
+    price: 395,
     is_monthly_featured: true,
-    is_new: true,
-    is_staff_pick: false,
+    is_new: false,
+    is_staff_pick: true,
+    image: "/public/productos/olla.jpg",
     story: {
-      title: "El hoodie de los diseñadores",
-      philosophy: "Lady White Co. es de LA. Hacen basics con algodón tubular heavyweight (450gsm). Sin estampados, sin logos gigantes. Solo construcción perfecta. El hoodie tiene cuerpo boxy, mangas set-in (no raglan), ribbing grueso que dura. Es lo que vistes cuando no necesitas probar nada.",
-      gestalt_principle: "Proximidad",
-      why_matters: "Este hoodie cuesta $198 porque está hecho en California con sueldos justos. El algodón es de fibra larga de USA. Cada pieza se lava después de coser—pre-shrunk real. Las costuras son flat-locked. En 5 años sigue igual. Marcas como Kith y John Elliott copian este fit.",
-      craft_story: "Algodón 100% USA, hilado en Carolina del Norte. Tela tubular (sin costuras laterales). Construcción cut-and-sew. Tintes reactivos (color que no desvanece). Hecho en LA. Lotes pequeños. Restock cada 3-4 meses. Sold out en horas."
+      title: "La herencia de hierro esmaltado",
+      philosophy: "Le Creuset fabrica en Francia desde 1925. Su Dutch Oven de hierro fundido es el recipiente que pasa de generación en generación. Distribución de calor perfecta. Esmalte que dura décadas. Colores icónicos que definen cocinas.",
+      gestalt_principle: "Continuidad",
+      why_matters: "Funciona en estufa, horno, parrilla, inducción. Hace guisos, pan, sopas, todo. El peso es una feature, no un bug: retención de calor incomparable.",
+      craft_story: "Hierro fundido en arena. Esmaltado a mano. Cada pieza pasa por 30 manos. Garantía de por vida. El Flame Orange original de 1925 sigue en producción."
     },
     specs: {
-      weight: "450gsm",
-      material: "Algodón tubular USA",
-      fit: "Boxy oversized"
+      capacity: "5.5 qt",
+      material: "Hierro fundido esmaltado",
+      origin: "Francia"
     }
   },
   {
     id: 12,
-    name: "Póster Norm Architects",
-    brand: "Norm Architects",
+    name: "Muji Gel Ink Pen 0.38",
+    brand: "Muji",
     category: "Lifestyle",
-    price: 89,
+    price: 2,
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: true,
+    image: "/public/productos/pen.jpg",
     story: {
-      title: "Arte sin ser pretencioso",
-      philosophy: "Norm Architects es un estudio danés de diseño minimalista. Sus prints son fotografías arquitectónicas en B&N—líneas limpias, composición geométrica, calma visual. No son ilustraciones cursis de Etsy. Son piezas que transforman un cuarto en espacio curado.",
+      title: "La perfección en lo mínimo",
+      philosophy: "Muji significa 'sin marca'. Este bolígrafo de gel de $2 es mejor que plumas de $50. Tinta que fluye sin esfuerzo, punta de 0.38mm para escritura precisa, cuerpo transparente sin distracciones. El diseño japonés reducido a su esencia.",
       gestalt_principle: "Simplicidad (Prägnanz)",
-      why_matters: "Los pósters baratos se ven baratos. Estos son impresos en papel Hahnemühle Photo Rag 308gsm (el mismo papel que usan museos). Tintas Epson UltraChrome HDX (archival por 100+ años). Viene sin marco—porque sabes que comprarás uno de roble. Silent flex.",
-      craft_story: "Impreso en Dinamarca bajo demanda. Papel 100% algodón acid-free. Certificado Museum Quality. Envío en tubo rígido. Sin marca de agua, sin logos. Solo foto, firma digital pequeña. Ediciones limitadas numeradas disponibles a x3 precio."
+      why_matters: "Es el bolígrafo de arquitectos, escritores, y personas que toman notas. No hay logo, no hay pretensión. Solo funcionalidad pura. Compras 10 y duran años.",
+      craft_story: "Tinta de gel de baja viscosidad. Cuerpo de polipropileno reciclable. Hecho en Japón. El producto más vendido de Muji a nivel mundial. El secreto mejor guardado de la papelería."
     },
     specs: {
-      size: "50x70cm",
-      paper: "Hahnemühle 308gsm",
-      archival: "100+ años"
+      tip: "0.38mm",
+      ink: "Gel",
+      colors: "Negro, azul, rojo"
     }
   }
 ];
 
-// Productos Regulares - Storytelling normal
+// Productos Regulares
 export const regular_products = [
   {
     id: 13,
-    name: "Switches Gateron Oil King",
-    brand: "Gateron",
-    category: "Gaming",
-    price: 65,
+    name: "Airtag",
+    brand: "Apple",
+    category: "Tech",
+    price: 29,
     is_monthly_featured: false,
     is_new: true,
     is_staff_pick: false,
-    description: "Switches lineales pre-lubricados de fábrica. 55g actuation, nylon housing, stem POM. El switch que usan keyboard modders antes de custom lubing. Sonido profundo y smooth stock.",
+    image: "/public/productos/airtag.png",
+    description: "Localizador de precisión con Ultra Wideband. Red Find My de mil millones de dispositivos. Batería de un año reemplazable. Para nunca perder lo importante.",
     specs: {
-      type: "Linear",
-      actuation: "55g",
-      lubed: "Factory pre-lube"
+      battery: "1 año (CR2032)",
+      precision: "Ultra Wideband",
+      water_resistance: "IP67"
     }
   },
   {
     id: 14,
-    name: "Camiseta 3sixteen",
-    brand: "3sixteen",
+    name: "Acne Studios Stockholm 1996",
+    brand: "Acne Studios",
     category: "Streetwear",
-    price: 88,
+    price: 340,
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: true,
-    description: "Heavyweight tee (230gsm) con cuello ribbed. Algodón compacto de Zimbabwe. Corte regular, pre-shrunk. De la marca que puso el selvedge denim en el mapa underground.",
+    image: "/public/productos/acne.png",
+    description: "El minimalismo escandinavo en forma de hoodie. Algodón orgánico, corte oversized, y el icónico parche Face. Acne Studios define el lujo silencioso desde Estocolmo.",
     specs: {
-      weight: "230gsm",
-      material: "Algodón Zimbabwe",
+      material: "Algodón orgánico 100%",
+      fit: "Oversized",
       origin: "Portugal"
     }
   },
   {
     id: 15,
-    name: "Cable Custom Mechcables",
-    brand: "Mechcables",
+    name: "Anker PowerCore 10000",
+    brand: "Anker",
     category: "Tech",
-    price: 85,
+    price: 26,
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: false,
-    description: "Cable coiled artesanal para teclados custom. Paracord sleeve, aviator connector, USB-C o mini. Hecho a mano en USA. Colores personalizables. Para completar el setup aesthetic.",
+    image: "/public/productos/anker.jpg",
+    description: "El powerbank más vendido por algo. 10000mAh en tamaño compacto. PowerIQ para carga optimizada. Más de 50 millones de unidades vendidas.",
     specs: {
-      length: "5ft + coil",
-      connectors: "Aviator detachable",
-      custom: "Sí"
+      capacity: "10000mAh",
+      output: "12W",
+      weight: "180g"
     }
   },
   {
     id: 16,
-    name: "Jeans Oni Secret Denim",
-    brand: "Oni Denim",
+    name: "A.P.C. Petit New Standard",
+    brand: "A.P.C.",
     category: "Streetwear",
-    price: 295,
+    price: 245,
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: true,
-    description: "Denim japonés irregular weave de 20oz. Fades únicos tipo 'slubby'. Sin lavar (raw). Para los que entienden que los mejores jeans tardan 6 meses en romperse correctamente.",
+    image: "/public/productos/apc.png",
+    description: "El jean parisino por excelencia. Denim japonés raw que se moldea a tu cuerpo con el uso. Sin lavado, sin distressing artificial. La paciencia recompensada con fades únicos.",
     specs: {
-      weight: "20oz",
-      weave: "Secret irregular",
-      wash: "Raw unwashed"
+      denim: "Japonés 14oz raw",
+      fit: "Slim tapered",
+      selvedge: "Sí"
     }
   },
   {
     id: 17,
-    name: "DAC Schiit Modi 3E",
-    brand: "Schiit Audio",
+    name: "JBL Flip 6",
+    brand: "JBL",
     category: "Tech",
     price: 129,
     is_monthly_featured: false,
     is_new: true,
     is_staff_pick: false,
-    description: "DAC USB de alto rendimiento. AKM4493 chip, señal balanceada. Para audiophiles con presupuesto. Hecho en California por gente que odia el audiophile snake oil. No BS, solo specs.",
+    image: "/public/productos/jbl.webp",
+    description: "Speaker Bluetooth portátil con IP67. 12 horas de batería. PartyBoost para conectar múltiples speakers. Bass potente en formato compacto.",
     specs: {
-      chip: "AKM4493",
-      thd: "<0.0003%",
-      made_in: "USA"
+      battery: "12 horas",
+      waterproof: "IP67",
+      connectivity: "Bluetooth 5.1"
     }
   },
   {
     id: 18,
-    name: "Gorra Kapital Kountry",
-    brand: "Kapital",
+    name: "Ray-Ban Wayfarer",
+    brand: "Ray-Ban",
     category: "Streetwear",
-    price: 120,
+    price: 171,
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: false,
-    description: "Gorra workwear japonesa con boro stitching. Cada una envejece diferente. Kapital es la marca de denim que Visvim respeta. Weird, hermosa, cara.",
+    image: "/public/productos/rayban.jpg",
+    description: "Las gafas que usó medio Hollywood. Diseño de 1956 que nunca pasó de moda. Acetato italiano. Lentes de cristal. El ícono atemporal.",
     specs: {
-      origin: "Japón",
-      technique: "Boro stitching",
-      fit: "Ajustable"
+      material: "Acetato italiano",
+      lenses: "Cristal G-15",
+      model: "Original Wayfarer"
     }
   },
   {
     id: 19,
-    name: "Micrófono Lewitt LCT 440",
-    brand: "Lewitt",
-    category: "Tech",
-    price: 299,
+    name: "Moleskine Classic Notebook",
+    brand: "Moleskine",
+    category: "Lifestyle",
+    price: 24,
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: true,
-    description: "Condensador austriaco que compite con Neumanns de $1000. Capsula de 1 pulgada, SPL de 140dB. Para podcasters y músicos que research antes de comprar Shure por default.",
+    image: "/public/productos/notebook.webp",
+    description: "El cuaderno de Hemingway, Picasso y Chatwin. Pasta dura, elástico, bolsillo interior, papel marfil 70g. El compañero de ideas desde hace dos siglos.",
     specs: {
-      type: "Condensador XLR",
-      capsule: "1 pulgada",
-      spl: "140dB"
+      pages: "240",
+      paper: "70g/m² sin ácido",
+      binding: "Cosido"
     }
   },
   {
     id: 20,
-    name: "Tote Baggu Washed",
-    brand: "Baggu",
-    category: "Carry",
-    price: 18,
+    name: "Bolso Guess",
+    brand: "Guess",
+    category: "Streetwear",
+    price: 95,
     is_monthly_featured: false,
     is_new: true,
     is_staff_pick: false,
-    description: "La bolsa reusable que todos copian. Nylon reciclado, soporta 22kg, se pliega en nada. Disponible en 100+ prints. Sostenibilidad real sin virtue signaling.",
+    image: "/public/productos/guess.webp",
+    description: "El accesorio que eleva cualquier outfit. Diseño reconocible, materiales premium, y ese toque de lujo accesible que define a Guess desde los 80s.",
     specs: {
-      capacity: "22kg",
-      material: "Nylon reciclado",
-      folds: "Pocket size"
+      material: "Piel sintética premium",
+      style: "Crossbody",
+      origin: "Diseño USA"
     }
   }
 ];
@@ -405,45 +425,45 @@ export const products = [...monthly_featured_products, ...regular_products];
 export const collections = [
   {
     id: 1,
-    name: "Setup del Insider",
+    name: "Tech Essentials",
     product_count: 4,
-    description: "Gaming gear que los pros no comparten.",
-    product_ids: [1, 2, 7, 15]
+    description: "Los gadgets que realmente valen la pena.",
+    product_ids: [1, 2, 6, 7]
   },
   {
     id: 2,
-    name: "Grails Silenciosos",
+    name: "Everyday Carry",
     product_count: 5,
-    description: "Streetwear para los que saben.",
-    product_ids: [4, 5, 11, 14, 16]
+    description: "Lo que llevas contigo, define quién eres.",
+    product_ids: [3, 10, 12, 15, 20]
   },
   {
     id: 3,
-    name: "EDC No Básico",
+    name: "Wardrobe Basics",
     product_count: 4,
-    description: "Carry gear que nadie tiene.",
-    product_ids: [3, 6, 8, 9]
+    description: "Piezas atemporales que nunca fallan.",
+    product_ids: [4, 8, 14, 16]
   },
   {
     id: 4,
-    name: "WFH de Culto",
+    name: "Home Office",
     product_count: 4,
-    description: "Workspace para nerds de verdad.",
-    product_ids: [2, 10, 12, 17]
+    description: "Tu espacio de trabajo, optimizado.",
+    product_ids: [7, 9, 5, 19]
   },
   {
     id: 5,
-    name: "Audiofilia Entry",
+    name: "Audio Premium",
     product_count: 3,
-    description: "Sonido real sin break the bank.",
-    product_ids: [6, 17, 19]
+    description: "Sonido que marca la diferencia.",
+    product_ids: [1, 2, 17]
   },
   {
     id: 6,
-    name: "Japanese Quality",
-    product_count: 4,
-    description: "Calidad nipona que vale la pena.",
-    product_ids: [4, 9, 16, 18]
+    name: "Kitchen Icons",
+    product_count: 3,
+    description: "Herramientas que elevan tu cocina.",
+    product_ids: [3, 11, 12]
   }
 ];
 
@@ -459,7 +479,6 @@ export const get_category_counts = () => {
 export const categories = [
   { name: "All" },
   { name: "Featured" },
-  { name: "Gaming" },
   { name: "Tech" },
   { name: "Streetwear" },
   { name: "Carry" },

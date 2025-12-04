@@ -58,7 +58,7 @@ const ComparePage = () => {
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain p-4"
             />
           ) : (
             <span className="text-[28px] sm:text-[36px] font-medium text-curated-text text-center px-6">

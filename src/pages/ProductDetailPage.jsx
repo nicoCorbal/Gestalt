@@ -45,11 +45,19 @@ const ProductDetailPage = () => {
                   PRODUCTO DEL MES
                 </div>
               )}
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
+              {product.image ? (
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-contain p-6 sm:p-8"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <span className="text-[32px] sm:text-[48px] font-medium text-curated-text-muted text-center px-8 leading-tight">
+                    {product.name}
+                  </span>
+                </div>
+              )}
             </div>
 
             <div className="p-6 sm:p-8 md:p-10 flex flex-col justify-between">
@@ -187,11 +195,17 @@ const ProductDetailPage = () => {
                   className="bg-white rounded-2xl overflow-hidden border border-curated-border hover:shadow-lg transition-all group"
                 >
                   <div className="aspect-square bg-curated-bg overflow-hidden relative">
-                    <img
-                      src={related_product.image}
-                      alt={related_product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                    {related_product.image ? (
+                      <img
+                        src={related_product.image}
+                        alt={related_product.name}
+                        className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <span className="text-curated-text-muted text-[14px] text-center px-4">{related_product.name}</span>
+                      </div>
+                    )}
                     {related_product.is_monthly_featured && (
                       <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-curated-text text-white px-3 py-1.5 rounded-full shadow-sm">
                         <span className="text-[11px] font-medium tracking-wide">DEL MES</span>

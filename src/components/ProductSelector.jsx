@@ -84,7 +84,7 @@ const ProductSelector = ({ is_open, on_close, on_select, exclude_id = null }) =>
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                          className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform"
                         />
                       ) : (
                         <span className="text-[14px] text-curated-text-muted text-center px-4">

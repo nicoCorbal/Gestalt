@@ -5,21 +5,19 @@ const CategoryFilter = ({ active_category, on_category_change, categories }) => 
   const category_icons = {
     All: Layers,
     Featured: Award,
-    Gaming: Smartphone,
-    Tech: Briefcase,
+    Tech: Smartphone,
     Streetwear: ShoppingBag,
-    Carry: ShoppingBag,
+    Carry: Briefcase,
     Lifestyle: Heart
   };
 
   const category_translations = {
     All: 'Todos',
     Featured: 'Del Mes',
-    Gaming: 'Tecnología',
-    Tech: 'Audio',
+    Tech: 'Tech',
     Streetwear: 'Moda',
-    Carry: 'Mochilas',
-    Lifestyle: 'Hogar'
+    Carry: 'Carry',
+    Lifestyle: 'Lifestyle'
   };
 
   return (
