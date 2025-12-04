@@ -124,7 +124,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: true,
     is_staff_pick: true,
-    image: "/productos/apple-watch-series-9.png",
+    image: "/productos/apple-watch-series-9.jpg",
     story: {
       title: "Tu salud en tu muñeca",
       philosophy: "El Apple Watch evolucionó de gadget a dispositivo médico. ECG, oxígeno en sangre, detección de caídas, crash detection. Chip S9 con doble toque. No es un reloj inteligente, es un guardián silencioso de tu bienestar.",
@@ -289,7 +289,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: true,
     is_staff_pick: false,
-    image: "/productos/airtag.png",
+    image: "/productos/airtag.jpg",
     description: "Localizador de precisión con Ultra Wideband. Red Find My de mil millones de dispositivos. Batería de un año reemplazable. Para nunca perder lo importante.",
     specs: {
       battery: "1 año (CR2032)",
@@ -306,7 +306,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: true,
-    image: "/productos/acne.png",
+    image: "/productos/acne.jpg",
     description: "El minimalismo escandinavo en forma de hoodie. Algodón orgánico, corte oversized, y el icónico parche Face. Acne Studios define el lujo silencioso desde Estocolmo.",
     specs: {
       material: "Algodón orgánico 100%",
@@ -340,7 +340,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: true,
-    image: "/productos/apc.png",
+    image: "/productos/apc.jpg",
     description: "El jean parisino por excelencia. Denim japonés raw que se moldea a tu cuerpo con el uso. Sin lavado, sin distressing artificial. La paciencia recompensada con fades únicos.",
     specs: {
       denim: "Japonés 14oz raw",
@@ -357,7 +357,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: true,
     is_staff_pick: false,
-    image: "/productos/jbl.webp",
+    image: "/productos/jbl.jpg",
     description: "Speaker Bluetooth portátil con IP67. 12 horas de batería. PartyBoost para conectar múltiples speakers. Bass potente en formato compacto.",
     specs: {
       battery: "12 horas",
@@ -391,7 +391,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: true,
-    image: "/productos/notebook.webp",
+    image: "/productos/notebook.jpg",
     description: "El cuaderno de Hemingway, Picasso y Chatwin. Pasta dura, elástico, bolsillo interior, papel marfil 70g. El compañero de ideas desde hace dos siglos.",
     specs: {
       pages: "240",

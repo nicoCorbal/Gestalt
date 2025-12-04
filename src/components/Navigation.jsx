@@ -111,7 +111,7 @@ const Navigation = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6 lg:gap-8" role="menubar">
+            <div className="hidden md:flex items-center gap-6 lg:gap-8">
               <NavLink to="/" isActive={location.pathname === '/'}>Inicio</NavLink>
               <NavLink to="/browse" isActive={location.pathname === '/browse' || location.pathname.startsWith('/collections')}>Explorar</NavLink>
               <NavLink to="/comparar" isActive={location.pathname === '/comparar'}>Comparar</NavLink>
@@ -180,7 +180,6 @@ const Navigation = () => {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.2 }}
-                role="menu"
               >
                 <motion.div
                   className="px-4 py-6 space-y-2"
@@ -208,7 +207,6 @@ const Navigation = () => {
                             ? 'text-curated-text font-medium bg-white'
                             : 'text-curated-text-muted hover:text-curated-text hover:bg-white/50'
                         }`}
-                        role="menuitem"
                         aria-current={link.isActive ? 'page' : undefined}
                       >
                         {link.label}

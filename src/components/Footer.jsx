@@ -17,29 +17,36 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="#"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Síguenos en Instagram"
                 className="w-10 h-10 rounded-full border-2 border-curated-border hover:border-curated-text flex items-center justify-center transition-colors group"
               >
-                <Instagram className="w-5 h-5 text-curated-text-muted group-hover:text-curated-text" />
+                <Instagram className="w-5 h-5 text-curated-text-muted group-hover:text-curated-text" aria-hidden="true" />
               </a>
               <a
-                href="#"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Síguenos en Twitter"
                 className="w-10 h-10 rounded-full border-2 border-curated-border hover:border-curated-text flex items-center justify-center transition-colors group"
               >
-                <Twitter className="w-5 h-5 text-curated-text-muted group-hover:text-curated-text" />
+                <Twitter className="w-5 h-5 text-curated-text-muted group-hover:text-curated-text" aria-hidden="true" />
               </a>
               <a
                 href="mailto:hello@gestalt.com"
+                aria-label="Envíanos un email"
                 className="w-10 h-10 rounded-full border-2 border-curated-border hover:border-curated-text flex items-center justify-center transition-colors group"
               >
-                <Mail className="w-5 h-5 text-curated-text-muted group-hover:text-curated-text" />
+                <Mail className="w-5 h-5 text-curated-text-muted group-hover:text-curated-text" aria-hidden="true" />
               </a>
             </div>
           </div>
 
           {/* Shop Column */}
           <div>
-            <h3 className="text-[13px] font-bold uppercase tracking-wide text-curated-text mb-6">Explorar</h3>
+            <h4 className="text-[13px] font-bold uppercase tracking-wide text-curated-text mb-6">Explorar</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/" className="text-[14px] text-curated-text-muted hover:text-curated-text transition-colors">
@@ -66,7 +73,7 @@ const Footer = () => {
 
           {/* Company Column */}
           <div>
-            <h3 className="text-[13px] font-bold uppercase tracking-wide text-curated-text mb-6">Nosotros</h3>
+            <h4 className="text-[13px] font-bold uppercase tracking-wide text-curated-text mb-6">Nosotros</h4>
             <ul className="space-y-3">
               <li>
                 <Link to="/info" className="text-[14px] text-curated-text-muted hover:text-curated-text transition-colors">
@@ -88,12 +95,14 @@ const Footer = () => {
 
           {/* Newsletter Column */}
           <div>
-            <h3 className="text-[13px] font-bold uppercase tracking-wide text-curated-text mb-6">Mantente conectado</h3>
+            <h4 className="text-[13px] font-bold uppercase tracking-wide text-curated-text mb-6">Mantente conectado</h4>
             <p className="text-[14px] text-curated-text-muted mb-4 leading-relaxed">
               Únete a nuestra comunidad. Reflexiones semanales sobre diseño, curaduría y vida intencional.
             </p>
             <form className="flex flex-col gap-3">
+              <label htmlFor="footer-email" className="sr-only">Tu email</label>
               <input
+                id="footer-email"
                 type="email"
                 placeholder="TU@EMAIL.COM"
                 className="px-4 py-3 text-[13px] uppercase tracking-wide bg-curated-bg border-2 border-curated-border rounded-lg focus:outline-none focus:border-curated-text transition-colors placeholder:text-curated-text-muted"

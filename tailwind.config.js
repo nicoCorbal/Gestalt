@@ -13,7 +13,7 @@ export default {
         'curated-bg': '#f2f2f2',
         'curated-bg-light': '#f5f5f5',
         'curated-text': '#141414',
-        'curated-text-muted': '#737373',
+        'curated-text-muted': '#5c5c5c',
         'curated-text-secondary': '#666666',
         'curated-border': '#ebebeb',
       },

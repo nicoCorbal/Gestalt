@@ -58,6 +58,7 @@ const BrowsePage = () => {
                     <img
                       src={cover_image}
                       alt={collection.name}
+                      loading="lazy"
                       className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : (

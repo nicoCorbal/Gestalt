@@ -119,6 +119,7 @@ const HeroSection = () => {
                     <img
                       src={product.image}
                       alt={product.name}
+                      loading="eager"
                       className="w-full h-full object-contain p-1.5 md:p-2 group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : (
