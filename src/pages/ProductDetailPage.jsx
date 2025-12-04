@@ -4,6 +4,16 @@ import { motion } from 'framer-motion';
 import PageTransition from '../components/PageTransition';
 import { products, collections } from '../data/products';
 
+// Obtener imagen de una colección
+const get_collection_image = (collection) => {
+  const collection_products = collection.product_ids
+    .map(id => products.find(p => p.id === id))
+    .filter(p => p && p.image);
+
+  if (collection_products.length === 0) return null;
+  return collection_products[0]?.image;
+};
+
 const ProductDetailPage = () => {
   const { id } = useParams();
   const product = products.find(p => p.id === parseInt(id));
@@ -154,27 +164,39 @@ const ProductDetailPage = () => {
             {collections
               .filter(col => col.product_ids.includes(product.id))
               .slice(0, 2)
-              .map((collection) => (
-              <Link
-                key={collection.id}
-                to={`/collections/${collection.id}`}
-                className="bg-white rounded-2xl overflow-hidden border border-curated-border hover:shadow-lg transition-all group"
-              >
-                <div className="aspect-video bg-curated-bg overflow-hidden flex items-center justify-center">
-                  <span className="text-[48px] font-bold text-curated-text-muted opacity-20">
-                    {collection.product_count}
-                  </span>
-                </div>
-                <div className="p-4 sm:p-5">
-                  <h3 className="font-medium text-curated-text mb-1 text-[15px] sm:text-[16px] group-hover:text-curated-text-secondary transition-colors">
-                    {collection.name}
-                  </h3>
-                  <p className="text-[13px] sm:text-[14px] text-curated-text-muted">
-                    {collection.product_count} productos
-                  </p>
-                </div>
-              </Link>
-            ))}
+              .map((collection) => {
+                const cover_image = get_collection_image(collection);
+                return (
+                  <Link
+                    key={collection.id}
+                    to={`/collections/${collection.id}`}
+                    className="bg-white rounded-2xl overflow-hidden border border-curated-border hover:shadow-lg transition-all group"
+                  >
+                    <div className="aspect-video bg-white overflow-hidden flex items-center justify-center">
+                      {cover_image ? (
+                        <img
+                          src={cover_image}
+                          alt={collection.name}
+                          loading="lazy"
+                          className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
+                        <span className="text-[48px] font-bold text-curated-text-muted opacity-20">
+                          {collection.product_count}
+                        </span>
+                      )}
+                    </div>
+                    <div className="p-4 sm:p-5">
+                      <h3 className="font-medium text-curated-text mb-1 text-[15px] sm:text-[16px] group-hover:text-curated-text-secondary transition-colors">
+                        {collection.name}
+                      </h3>
+                      <p className="text-[13px] sm:text-[14px] text-curated-text-muted">
+                        {collection.product_count} productos
+                      </p>
+                    </div>
+                  </Link>
+                );
+              })}
           </div>
         </div>
 
