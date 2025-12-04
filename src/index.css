@@ -62,3 +62,16 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Scroll snap utilities */
+.snap-y {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.snap-mandatory {
+  scroll-snap-type: y mandatory;
+}

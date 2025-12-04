@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import HeroSection from '../components/HeroSection';
 import CategoryFilter from '../components/CategoryFilter';
 import ProductGrid from '../components/ProductGrid';
+import PageTransition from '../components/PageTransition';
 import { products, categories, get_category_counts } from '../data/products';
 
 const HomePage = () => {
@@ -19,28 +20,28 @@ const HomePage = () => {
   }, [category_counts]);
 
   const filtered_products = useMemo(() => {
-    if (active_category === 'All') {
-      return products;
+    switch (active_category) {
+      case 'All':
+        return products;
+      case 'Featured':
+        return products.filter(product => product.is_monthly_featured);
+      default:
+        return products.filter(product => product.category === active_category);
     }
-    if (active_category === 'New') {
-      return products.filter(product => product.is_new);
-    }
-    if (active_category === 'Picks') {
-      return products.filter(product => product.is_staff_pick);
-    }
-    return products.filter(product => product.category === active_category);
   }, [active_category]);
 
   return (
-    <div className="min-h-screen bg-curated-bg-light">
-      <HeroSection />
-      <CategoryFilter
-        active_category={active_category}
-        on_category_change={set_active_category}
-        categories={categories_with_counts}
-      />
-      <ProductGrid products={filtered_products} />
-    </div>
+    <PageTransition>
+      <div className="min-h-screen bg-curated-bg-light">
+        <HeroSection />
+        <CategoryFilter
+          active_category={active_category}
+          on_category_change={set_active_category}
+          categories={categories_with_counts}
+        />
+        <ProductGrid products={filtered_products} active_category={active_category} />
+      </div>
+    </PageTransition>
   );
 };
 

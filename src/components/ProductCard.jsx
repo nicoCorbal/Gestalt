@@ -1,19 +1,23 @@
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import StaffPickBadge from './StaffPickBadge';
+import { motion } from 'framer-motion';
+
+const MotionLink = motion.create(Link);
 
 const ProductCard = ({ product }) => {
   return (
-    <Link
+    <MotionLink
       to={`/products/${product.id}`}
-      className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+      className="group bg-white rounded-2xl overflow-hidden"
+      layout
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+      whileHover={{ y: -4, boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)' }}
+      transition={{ duration: 0.2 }}
+      aria-label={`Ver ${product.name} - $${product.price}`}
     >
       <div className="relative aspect-square bg-white overflow-hidden">
-        {product.is_monthly_featured && (
-          <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-curated-text text-white rounded-full text-[11px] font-medium tracking-wide">
-            DEL MES
-          </div>
-        )}
         {product.image ? (
           <img
             src={product.image}
@@ -21,8 +25,8 @@ const ProductCard = ({ product }) => {
             className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-white">
-            <span className="text-curated-text-muted text-[15px]">{product.name}</span>
+          <div className="w-full h-full flex items-center justify-center bg-curated-bg">
+            <span className="text-curated-text-muted text-[14px] text-center px-4">{product.name}</span>
           </div>
         )}
         <div className="absolute top-4 right-4 w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
@@ -43,7 +47,7 @@ const ProductCard = ({ product }) => {
           ${product.price.toLocaleString()}
         </p>
       </div>
-    </Link>
+    </MotionLink>
   );
 };
 

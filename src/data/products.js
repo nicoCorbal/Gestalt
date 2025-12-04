@@ -7,6 +7,8 @@ export const monthly_featured_products = [
     category: "Gaming",
     price: 179,
     is_monthly_featured: true,
+    is_new: true,
+    is_staff_pick: true,
     story: {
       title: "El mouse que los pros esconden",
       philosophy: "Endgame Gear es una marca alemana que solo conocen los esports nerds de verdad. El OP1 8K polling rate—8000Hz de actualización. Latencia imperceptible. 55g sin agujeros. Switches ópticos Kailh GM 8.0 que duran 80 millones de clics. Es ingeniería obsesiva para el 0.1%.",
@@ -27,6 +29,8 @@ export const monthly_featured_products = [
     category: "Tech",
     price: 450,
     is_monthly_featured: true,
+    is_new: false,
+    is_staff_pick: true,
     story: {
       title: "El endgame del custom keyboard",
       philosophy: "Mode Designs es una boutique de LA que vende teclados por group buy—produces lo que vendes, nada más. El Sonnet tiene mounting system de gasket (suspensión flotante), bloque de aluminio CNC de 3kg, PCB flex-cut. No es un teclado, es un statement piece.",
@@ -47,6 +51,8 @@ export const monthly_featured_products = [
     category: "Carry",
     price: 269,
     is_monthly_featured: true,
+    is_new: true,
+    is_staff_pick: false,
     story: {
       title: "La mochila de los nómadas reales",
       philosophy: "Able Carry es canadiense, fundada por diseñadores frustrados con Arc'teryx y Peak Design. La Max usa X-Pac VX21—tela de velas de yate. Impermeabilizable sin coating (que se degrada). Roll-top con cierre magnético. Para los que viven entre Airbnbs.",
@@ -67,6 +73,8 @@ export const monthly_featured_products = [
     category: "Streetwear",
     price: 195,
     is_monthly_featured: true,
+    is_new: false,
+    is_staff_pick: true,
     story: {
       title: "Trail runners que conquistaron Shibuya",
       philosophy: "Hoka empezó haciendo zapatillas ultra-amortiguadas para ultramaratones. Los japoneses las adoptaron para streetwear antes que nadie. Las Mafate Speed 4 tienen suela Vibram Megagrip, upper de malla ripstop, y ese aesthetic maximalista que Salomon desearía tener.",
@@ -87,6 +95,8 @@ export const monthly_featured_products = [
     category: "Streetwear",
     price: 850,
     is_monthly_featured: true,
+    is_new: false,
+    is_staff_pick: false,
     story: {
       title: "Techwear sin logos",
       philosophy: "Veilance es la línea urbana de Arc'teryx—misma tecnología, cero branding visible. La Nemis es una parka minimalista con Gore-Tex Pro, sellado total, capucha escondida en el cuello. Es la chamarra que usan arquitectos en Copenhague y diseñadores en Seúl.",
@@ -107,6 +117,8 @@ export const monthly_featured_products = [
     category: "Tech",
     price: 319,
     is_monthly_featured: true,
+    is_new: true,
+    is_staff_pick: true,
     story: {
       title: "Audiofilia accesible",
       philosophy: "Moondrop es chino, pero respetado en Head-Fi. Los Blessing 3 tienen 4BA + 1DD (4 balanced armatures + 1 dynamic driver). Curva Harman target tuning. Soundstage amplio, separación de instrumentos quirúrgica. Para los que dejaron Spotify y migraron a FLAC.",
@@ -127,6 +139,8 @@ export const monthly_featured_products = [
     category: "Gaming",
     price: 799,
     is_monthly_featured: true,
+    is_new: false,
+    is_staff_pick: false,
     story: {
       title: "El monitor crowd-developed",
       philosophy: "Eve es una startup que diseña productos votados por su comunidad. El Spectrum 4K 144Hz usa panel LG IPS con 98% DCI-P3. HDMI 2.1, DisplayPort 1.4a, USB-C con 100W PD. Es lo que pasa cuando gamers y diseñadores colaboran sin compromisos corporativos.",
@@ -147,6 +161,8 @@ export const monthly_featured_products = [
     category: "Carry",
     price: 140,
     is_monthly_featured: true,
+    is_new: false,
+    is_staff_pick: true,
     story: {
       title: "Hecha a mano en Massachusetts",
       philosophy: "Corter Leather es un one-man operation en Boston. Cada cartera es cortada, cosida, y terminada por el dueño. Cuero Horween Chromexcel de 4-5oz. No hay dos iguales. Compras directamente del artesano—no hay intermediarios, no hay markup corporativo.",
@@ -167,6 +183,8 @@ export const monthly_featured_products = [
     category: "Lifestyle",
     price: 38,
     is_monthly_featured: true,
+    is_new: true,
+    is_staff_pick: true,
     story: {
       title: "El termo japonés secreto",
       philosophy: "Zojirushi es una marca japonesa de 1918 que nadie en occidente conoce (excepto los que saben). El SM-SE mantiene líquidos calientes por 12 horas, fríos por 24. Vacío dual-wall de acero. Tapa con lock que NO derrama. Stanley quién?",
@@ -187,6 +205,8 @@ export const monthly_featured_products = [
     category: "Tech",
     price: 549,
     is_monthly_featured: true,
+    is_new: false,
+    is_staff_pick: false,
     story: {
       title: "La Herman Miller que nadie menciona",
       philosophy: "Steelcase es el competidor directo de Herman Miller—misma calidad, menos hype, menos precio. La Series 2 tiene soporte lumbar ajustable en 4D, brazos 4D, reclinación sincronizada. Es la silla de oficinas corporativas serias—donde la productividad importa más que el flex.",
@@ -207,6 +227,8 @@ export const monthly_featured_products = [
     category: "Streetwear",
     price: 198,
     is_monthly_featured: true,
+    is_new: true,
+    is_staff_pick: false,
     story: {
       title: "El hoodie de los diseñadores",
       philosophy: "Lady White Co. es de LA. Hacen basics con algodón tubular heavyweight (450gsm). Sin estampados, sin logos gigantes. Solo construcción perfecta. El hoodie tiene cuerpo boxy, mangas set-in (no raglan), ribbing grueso que dura. Es lo que vistes cuando no necesitas probar nada.",
@@ -227,6 +249,8 @@ export const monthly_featured_products = [
     category: "Lifestyle",
     price: 89,
     is_monthly_featured: true,
+    is_new: false,
+    is_staff_pick: true,
     story: {
       title: "Arte sin ser pretencioso",
       philosophy: "Norm Architects es un estudio danés de diseño minimalista. Sus prints son fotografías arquitectónicas en B&N—líneas limpias, composición geométrica, calma visual. No son ilustraciones cursis de Etsy. Son piezas que transforman un cuarto en espacio curado.",
@@ -251,6 +275,8 @@ export const regular_products = [
     category: "Gaming",
     price: 65,
     is_monthly_featured: false,
+    is_new: true,
+    is_staff_pick: false,
     description: "Switches lineales pre-lubricados de fábrica. 55g actuation, nylon housing, stem POM. El switch que usan keyboard modders antes de custom lubing. Sonido profundo y smooth stock.",
     specs: {
       type: "Linear",
@@ -265,6 +291,8 @@ export const regular_products = [
     category: "Streetwear",
     price: 88,
     is_monthly_featured: false,
+    is_new: false,
+    is_staff_pick: true,
     description: "Heavyweight tee (230gsm) con cuello ribbed. Algodón compacto de Zimbabwe. Corte regular, pre-shrunk. De la marca que puso el selvedge denim en el mapa underground.",
     specs: {
       weight: "230gsm",
@@ -279,6 +307,8 @@ export const regular_products = [
     category: "Tech",
     price: 85,
     is_monthly_featured: false,
+    is_new: false,
+    is_staff_pick: false,
     description: "Cable coiled artesanal para teclados custom. Paracord sleeve, aviator connector, USB-C o mini. Hecho a mano en USA. Colores personalizables. Para completar el setup aesthetic.",
     specs: {
       length: "5ft + coil",
@@ -293,6 +323,8 @@ export const regular_products = [
     category: "Streetwear",
     price: 295,
     is_monthly_featured: false,
+    is_new: false,
+    is_staff_pick: true,
     description: "Denim japonés irregular weave de 20oz. Fades únicos tipo 'slubby'. Sin lavar (raw). Para los que entienden que los mejores jeans tardan 6 meses en romperse correctamente.",
     specs: {
       weight: "20oz",
@@ -307,6 +339,8 @@ export const regular_products = [
     category: "Tech",
     price: 129,
     is_monthly_featured: false,
+    is_new: true,
+    is_staff_pick: false,
     description: "DAC USB de alto rendimiento. AKM4493 chip, señal balanceada. Para audiophiles con presupuesto. Hecho en California por gente que odia el audiophile snake oil. No BS, solo specs.",
     specs: {
       chip: "AKM4493",
@@ -321,6 +355,8 @@ export const regular_products = [
     category: "Streetwear",
     price: 120,
     is_monthly_featured: false,
+    is_new: false,
+    is_staff_pick: false,
     description: "Gorra workwear japonesa con boro stitching. Cada una envejece diferente. Kapital es la marca de denim que Visvim respeta. Weird, hermosa, cara.",
     specs: {
       origin: "Japón",
@@ -335,6 +371,8 @@ export const regular_products = [
     category: "Tech",
     price: 299,
     is_monthly_featured: false,
+    is_new: false,
+    is_staff_pick: true,
     description: "Condensador austriaco que compite con Neumanns de $1000. Capsula de 1 pulgada, SPL de 140dB. Para podcasters y músicos que research antes de comprar Shure por default.",
     specs: {
       type: "Condensador XLR",
@@ -349,6 +387,8 @@ export const regular_products = [
     category: "Carry",
     price: 18,
     is_monthly_featured: false,
+    is_new: true,
+    is_staff_pick: false,
     description: "La bolsa reusable que todos copian. Nylon reciclado, soporta 22kg, se pliega en nada. Disponible en 100+ prints. Sostenibilidad real sin virtue signaling.",
     specs: {
       capacity: "22kg",
@@ -425,3 +465,14 @@ export const categories = [
   { name: "Carry" },
   { name: "Lifestyle" }
 ];
+
+// Helper para obtener producto por colección
+export const get_collection_by_id = (id) => {
+  return collections.find(c => c.id === parseInt(id));
+};
+
+export const get_products_by_collection = (collection_id) => {
+  const collection = get_collection_by_id(collection_id);
+  if (!collection) return [];
+  return collection.product_ids.map(id => products.find(p => p.id === id)).filter(Boolean);
+};

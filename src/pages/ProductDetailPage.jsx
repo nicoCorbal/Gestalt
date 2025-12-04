@@ -1,5 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ExternalLink, GitCompare } from 'lucide-react';
+import { motion } from 'framer-motion';
+import PageTransition from '../components/PageTransition';
 import { products, collections } from '../data/products';
 
 const ProductDetailPage = () => {
@@ -24,15 +26,16 @@ const ProductDetailPage = () => {
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-curated-bg-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <Link
-          to="/"
-          className="inline-flex items-center gap-2 text-curated-text-muted hover:text-curated-text mb-6 sm:mb-8 transition-colors"
-        >
-          <ArrowLeft className="w-5 h-5" />
-          Volver
-        </Link>
+    <PageTransition>
+      <div className="min-h-screen bg-curated-bg-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-curated-text-muted hover:text-curated-text mb-6 sm:mb-8 transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Volver
+          </Link>
 
         <div className="bg-white rounded-2xl overflow-hidden border border-curated-border mb-8 sm:mb-12 shadow-sm">
           <div className="grid md:grid-cols-2 gap-0">
@@ -65,10 +68,19 @@ const ProductDetailPage = () => {
                 <p className="text-[28px] sm:text-[32px] md:text-[36px] font-medium text-curated-text mb-6">
                   ${product.price.toLocaleString()}
                 </p>
-                <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-curated-text text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition-all font-medium shadow-lg">
-                  Ver producto
-                  <ExternalLink className="w-4 h-4" />
-                </button>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-curated-text text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition-all font-medium shadow-lg">
+                    Ver producto
+                    <ExternalLink className="w-4 h-4" />
+                  </button>
+                  <Link
+                    to={`/comparar?producto=${product.id}`}
+                    className="flex items-center justify-center gap-2 px-6 py-4 border border-curated-border rounded-full text-curated-text-muted hover:text-curated-text hover:border-curated-text transition-all font-medium"
+                  >
+                    <GitCompare className="w-4 h-4" />
+                    Comparar
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -103,6 +115,25 @@ const ProductDetailPage = () => {
           </div>
         )}
 
+        {/* Especificaciones */}
+        {product.specs && Object.keys(product.specs).length > 0 && (
+          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-curated-border mb-8 sm:mb-12 shadow-sm">
+            <h2 className="text-[20px] sm:text-[24px] font-medium text-curated-text mb-4 sm:mb-6">Especificaciones</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+              {Object.entries(product.specs).map(([key, value]) => (
+                <div key={key} className="border-l-2 border-curated-border pl-4">
+                  <p className="text-[12px] sm:text-[13px] text-curated-text-muted uppercase tracking-wide mb-1">
+                    {key.replace(/_/g, ' ')}
+                  </p>
+                  <p className="text-[15px] sm:text-[16px] text-curated-text font-medium">
+                    {value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="mb-8 sm:mb-12">
           <div className="flex items-center justify-between mb-4 sm:mb-6">
             <h2 className="text-[22px] sm:text-[28px] font-medium text-curated-text">Aparece en</h2>
@@ -111,27 +142,29 @@ const ProductDetailPage = () => {
             </Link>
           </div>
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
-            {collections.slice(0, 2).map((collection) => (
-              <div
+            {collections
+              .filter(col => col.product_ids.includes(product.id))
+              .slice(0, 2)
+              .map((collection) => (
+              <Link
                 key={collection.id}
-                className="bg-white rounded-2xl overflow-hidden border border-curated-border hover:shadow-lg transition-all cursor-pointer group"
+                to={`/collections/${collection.id}`}
+                className="bg-white rounded-2xl overflow-hidden border border-curated-border hover:shadow-lg transition-all group"
               >
-                <div className="aspect-video bg-curated-bg overflow-hidden">
-                  <img
-                    src={collection.image}
-                    alt={collection.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                <div className="aspect-video bg-curated-bg overflow-hidden flex items-center justify-center">
+                  <span className="text-[48px] font-bold text-curated-text-muted opacity-20">
+                    {collection.product_count}
+                  </span>
                 </div>
                 <div className="p-4 sm:p-5">
-                  <h3 className="font-medium text-curated-text mb-1 text-[15px] sm:text-[16px]">
+                  <h3 className="font-medium text-curated-text mb-1 text-[15px] sm:text-[16px] group-hover:text-curated-text-secondary transition-colors">
                     {collection.name}
                   </h3>
                   <p className="text-[13px] sm:text-[14px] text-curated-text-muted">
                     {collection.product_count} productos
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -183,9 +216,10 @@ const ProductDetailPage = () => {
               ))}
             </div>
           </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { collections } from '../data/products';
 import { ArrowRight } from 'lucide-react';
+import PageTransition from '../components/PageTransition';
 
 const BrowsePage = () => {
   return (
-    <div className="min-h-screen bg-curated-bg-light">
+    <PageTransition>
+      <div className="min-h-screen bg-curated-bg-light">
       {/* Hero Section */}
       <div className="max-w-curated mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
         <div className="text-center mb-12 sm:mb-16">
@@ -78,8 +81,9 @@ const BrowsePage = () => {
           </Link>
         </div>
       </div>
+        </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 

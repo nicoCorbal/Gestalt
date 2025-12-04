@@ -1,8 +1,10 @@
 import { Mail, Instagram, Twitter } from 'lucide-react';
+import PageTransition from '../components/PageTransition';
 
 const InfoPage = () => {
   return (
-    <div className="min-h-screen bg-curated-bg-light">
+    <PageTransition>
+      <div className="min-h-screen bg-curated-bg-light">
       <div className="max-w-[900px] mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         {/* Hero Section */}
         <div className="mb-12 sm:mb-16 md:mb-20 text-center">
@@ -143,8 +145,9 @@ const InfoPage = () => {
             </a>
           </div>
         </div>
+        </div>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 
