@@ -39,7 +39,7 @@ const ProductDetailPage = () => {
 
         <div className="bg-white rounded-2xl overflow-hidden border border-curated-border mb-8 sm:mb-12 shadow-sm">
           <div className="grid md:grid-cols-2 gap-0">
-            <div className="bg-curated-bg aspect-square relative">
+            <div className="bg-white aspect-square relative">
               {product.is_monthly_featured && (
                 <div className="absolute top-4 sm:top-6 left-4 sm:left-6 z-10 px-3 sm:px-4 py-1.5 sm:py-2 bg-curated-text text-white rounded-full text-[11px] sm:text-[12px] font-medium tracking-wide">
                   PRODUCTO DEL MES
@@ -194,7 +194,7 @@ const ProductDetailPage = () => {
                   to={`/products/${related_product.id}`}
                   className="bg-white rounded-2xl overflow-hidden border border-curated-border hover:shadow-lg transition-all group"
                 >
-                  <div className="aspect-square bg-curated-bg overflow-hidden relative">
+                  <div className="aspect-square bg-white overflow-hidden relative">
                     {related_product.image ? (
                       <img
                         src={related_product.image}

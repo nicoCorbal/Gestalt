@@ -53,7 +53,7 @@ const ComparePage = () => {
         transition={{ duration: 0.4 }}
       >
         {/* Imagen */}
-        <div className="aspect-square bg-curated-bg-light flex items-center justify-center">
+        <div className="aspect-square bg-white flex items-center justify-center">
           {product.image ? (
             <img
               src={product.image}
