@@ -1,8 +1,20 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { collections } from '../data/products';
+import { collections, products } from '../data/products';
 import { ArrowRight } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
+
+// Obtener imagen aleatoria de una colección
+const get_collection_image = (collection) => {
+  const collection_products = collection.product_ids
+    .map(id => products.find(p => p.id === id))
+    .filter(p => p && p.image);
+
+  if (collection_products.length === 0) return null;
+
+  const random_index = Math.floor(Math.random() * collection_products.length);
+  return collection_products[random_index]?.image;
+};
 
 const BrowsePage = () => {
   return (
@@ -32,35 +44,47 @@ const BrowsePage = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {collections.map((collection) => (
-            <Link
-              key={collection.id}
-              to={`/collections/${collection.id}`}
-              className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
-            >
-              <div className="relative aspect-[16/9] bg-curated-bg overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-curated-bg to-curated-bg-light">
-                  <span className="text-[40px] sm:text-[48px] font-bold text-curated-text-muted opacity-20">{collection.product_count}</span>
-                </div>
-                <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-curated-border">
-                  <span className="text-[10px] font-medium text-curated-text-muted">{collection.product_count} productos</span>
-                </div>
-              </div>
+          {collections.map((collection) => {
+            const cover_image = get_collection_image(collection);
 
-              <div className="p-5 sm:p-6">
-                <h3 className="text-[18px] sm:text-[20px] font-bold text-curated-text mb-2 leading-tight transition-colors">
-                  {collection.name}
-                </h3>
-                <p className="text-[13px] sm:text-[14px] text-curated-text-muted leading-relaxed mb-4">
-                  {collection.description || 'Una selección cuidadosamente curada de productos excepcionales.'}
-                </p>
-                <div className="flex items-center gap-2 text-curated-text font-medium text-[12px] sm:text-[13px] uppercase tracking-wide">
-                  <span>Explorar</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            return (
+              <Link
+                key={collection.id}
+                to={`/collections/${collection.id}`}
+                className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+              >
+                <div className="relative aspect-[16/9] bg-white overflow-hidden">
+                  {cover_image ? (
+                    <img
+                      src={cover_image}
+                      alt={collection.name}
+                      className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-curated-bg to-curated-bg-light">
+                      <span className="text-[40px] sm:text-[48px] font-bold text-curated-text-muted opacity-20">{collection.product_count}</span>
+                    </div>
+                  )}
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-curated-border">
+                    <span className="text-[10px] font-medium text-curated-text-muted">{collection.product_count} productos</span>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+
+                <div className="p-5 sm:p-6">
+                  <h3 className="text-[18px] sm:text-[20px] font-bold text-curated-text mb-2 leading-tight transition-colors">
+                    {collection.name}
+                  </h3>
+                  <p className="text-[13px] sm:text-[14px] text-curated-text-muted leading-relaxed mb-4">
+                    {collection.description || 'Una selección cuidadosamente curada de productos excepcionales.'}
+                  </p>
+                  <div className="flex items-center gap-2 text-curated-text font-medium text-[12px] sm:text-[13px] uppercase tracking-wide">
+                    <span>Explorar</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
 
