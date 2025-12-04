@@ -9,7 +9,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: true,
     is_staff_pick: true,
-    image: "/public/productos/airpods2.jpeg",
+    image: "/productos/airpods2.jpeg",
     story: {
       title: "El sonido que desaparece",
       philosophy: "Apple redefinió los auriculares inalámbricos. Los AirPods Pro 2 con chip H2 ofrecen cancelación de ruido adaptativa, audio espacial personalizado, y una integración perfecta con el ecosistema Apple. No son solo auriculares, son una extensión de tu dispositivo.",
@@ -32,7 +32,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: true,
-    image: "/public/productos/sonywh1000.avif",
+    image: "/productos/sonywh1000.avif",
     story: {
       title: "El estándar de la industria",
       philosophy: "Sony lleva décadas perfeccionando el audio. Los XM5 representan la culminación de esa obsesión: 8 micrófonos para la mejor cancelación de ruido del mercado, drivers de 30mm con diafragma de fibra de carbono, y un diseño que por fin es elegante.",
@@ -55,7 +55,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: true,
     is_staff_pick: false,
-    image: "/public/productos/stanley.webp",
+    image: "/productos/stanley.webp",
     story: {
       title: "El tumbler que rompió TikTok",
       philosophy: "Stanley existe desde 1913 haciendo termos para obreros. En 2023, el Quencher se volvió viral. No es hype vacío: 40oz de capacidad, doble pared al vacío, base que cabe en portavasos. Funcionalidad que se convirtió en fenómeno cultural.",
@@ -78,7 +78,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: true,
     is_staff_pick: true,
-    image: "/public/productos/salomon.webp",
+    image: "/productos/salomon.webp",
     story: {
       title: "Del trail a la pasarela",
       philosophy: "Salomon lleva décadas equipando a ultramaratonistas. Las XT-6 nacieron para carreras de montaña extremas. Luego, el mundo de la moda las descubrió. Hoy son el calzado técnico que ves en París y Tokyo. Rendimiento real convertido en estética.",
@@ -101,7 +101,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: false,
-    image: "/public/productos/kindle.jpg",
+    image: "/productos/kindle.jpg",
     story: {
       title: "Leer sin distracciones",
       philosophy: "En un mundo de notificaciones infinitas, el Kindle es un oasis. Pantalla e-ink de 300ppi que se lee como papel. Sin apps, sin redes sociales. Solo tú y las palabras. Es tecnología que te desconecta para reconectarte con lo que importa.",
@@ -124,7 +124,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: true,
     is_staff_pick: true,
-    image: "/public/productos/apple-watch-series-9.png",
+    image: "/productos/apple-watch-series-9.png",
     story: {
       title: "Tu salud en tu muñeca",
       philosophy: "El Apple Watch evolucionó de gadget a dispositivo médico. ECG, oxígeno en sangre, detección de caídas, crash detection. Chip S9 con doble toque. No es un reloj inteligente, es un guardián silencioso de tu bienestar.",
@@ -147,7 +147,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: false,
-    image: "/public/productos/logitech.webp",
+    image: "/productos/logitech.webp",
     story: {
       title: "El mouse de los profesionales",
       philosophy: "El MX Master es el mouse que usan diseñadores, desarrolladores y creadores. Scroll electromagnético MagSpeed. Sensor de 8000 DPI en cualquier superficie, incluso cristal. Ergonomía perfeccionada en 3 generaciones.",
@@ -170,7 +170,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: true,
-    image: "/public/productos/arcteryx.jpg",
+    image: "/productos/arcteryx.jpg",
     story: {
       title: "Ingeniería de montaña para la ciudad",
       philosophy: "Arc'teryx nació en la costa de British Columbia, donde los alpinistas exigen lo mejor. La Atom Hoody es aislamiento sintético Coreloft en un diseño minimalista. Ligera, packable, y más versátil que cualquier otra chaqueta que tengas.",
@@ -193,7 +193,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: true,
-    image: "/public/productos/hermanmiller.webp",
+    image: "/productos/hermanmiller.webp",
     story: {
       title: "El trono del trabajo moderno",
       philosophy: "La Aeron no es una silla, es un statement de que tu cuerpo importa. Diseñada por Bill Stumpf y Don Chadwick en 1994, revolucionó la ergonomía. Sin espuma que se degrada, solo Pellicle mesh que respira y se adapta. Está en el MoMA por algo.",
@@ -216,7 +216,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: true,
     is_staff_pick: false,
-    image: "/public/productos/tomtoc.jpg",
+    image: "/productos/tomtoc.jpg",
     story: {
       title: "La mochila profesional sin pretensiones",
       philosophy: "tomtoc nació de ex-ingenieros de Apple obsesionados con la protección. Esta mochila de 24L es el equilibrio perfecto entre capacidad y portabilidad. Compartimento acolchado para portátil de 15.6\", organización inteligente, y diseño que funciona igual en la oficina que en el metro.",
@@ -239,7 +239,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: true,
-    image: "/public/productos/olla.jpg",
+    image: "/productos/olla.jpg",
     story: {
       title: "La herencia de hierro esmaltado",
       philosophy: "Le Creuset fabrica en Francia desde 1925. Su Dutch Oven de hierro fundido es el recipiente que pasa de generación en generación. Distribución de calor perfecta. Esmalte que dura décadas. Colores icónicos que definen cocinas.",
@@ -262,7 +262,7 @@ export const monthly_featured_products = [
     is_monthly_featured: true,
     is_new: false,
     is_staff_pick: true,
-    image: "/public/productos/pen.jpg",
+    image: "/productos/pen.jpg",
     story: {
       title: "La perfección en lo mínimo",
       philosophy: "Muji significa 'sin marca'. Este bolígrafo de gel de $2 es mejor que plumas de $50. Tinta que fluye sin esfuerzo, punta de 0.38mm para escritura precisa, cuerpo transparente sin distracciones. El diseño japonés reducido a su esencia.",
@@ -289,7 +289,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: true,
     is_staff_pick: false,
-    image: "/public/productos/airtag.png",
+    image: "/productos/airtag.png",
     description: "Localizador de precisión con Ultra Wideband. Red Find My de mil millones de dispositivos. Batería de un año reemplazable. Para nunca perder lo importante.",
     specs: {
       battery: "1 año (CR2032)",
@@ -306,7 +306,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: true,
-    image: "/public/productos/acne.png",
+    image: "/productos/acne.png",
     description: "El minimalismo escandinavo en forma de hoodie. Algodón orgánico, corte oversized, y el icónico parche Face. Acne Studios define el lujo silencioso desde Estocolmo.",
     specs: {
       material: "Algodón orgánico 100%",
@@ -323,7 +323,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: false,
-    image: "/public/productos/anker.jpg",
+    image: "/productos/anker.jpg",
     description: "El powerbank más vendido por algo. 10000mAh en tamaño compacto. PowerIQ para carga optimizada. Más de 50 millones de unidades vendidas.",
     specs: {
       capacity: "10000mAh",
@@ -340,7 +340,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: true,
-    image: "/public/productos/apc.png",
+    image: "/productos/apc.png",
     description: "El jean parisino por excelencia. Denim japonés raw que se moldea a tu cuerpo con el uso. Sin lavado, sin distressing artificial. La paciencia recompensada con fades únicos.",
     specs: {
       denim: "Japonés 14oz raw",
@@ -357,7 +357,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: true,
     is_staff_pick: false,
-    image: "/public/productos/jbl.webp",
+    image: "/productos/jbl.webp",
     description: "Speaker Bluetooth portátil con IP67. 12 horas de batería. PartyBoost para conectar múltiples speakers. Bass potente en formato compacto.",
     specs: {
       battery: "12 horas",
@@ -374,7 +374,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: false,
-    image: "/public/productos/rayban.jpg",
+    image: "/productos/rayban.jpg",
     description: "Las gafas que usó medio Hollywood. Diseño de 1956 que nunca pasó de moda. Acetato italiano. Lentes de cristal. El ícono atemporal.",
     specs: {
       material: "Acetato italiano",
@@ -391,7 +391,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: false,
     is_staff_pick: true,
-    image: "/public/productos/notebook.webp",
+    image: "/productos/notebook.webp",
     description: "El cuaderno de Hemingway, Picasso y Chatwin. Pasta dura, elástico, bolsillo interior, papel marfil 70g. El compañero de ideas desde hace dos siglos.",
     specs: {
       pages: "240",
@@ -408,7 +408,7 @@ export const regular_products = [
     is_monthly_featured: false,
     is_new: true,
     is_staff_pick: false,
-    image: "/public/productos/guess.webp",
+    image: "/productos/guess.webp",
     description: "El accesorio que eleva cualquier outfit. Diseño reconocible, materiales premium, y ese toque de lujo accesible que define a Guess desde los 80s.",
     specs: {
       material: "Piel sintética premium",
