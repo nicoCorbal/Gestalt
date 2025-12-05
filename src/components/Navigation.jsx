@@ -276,8 +276,12 @@ const Navigation = () => {
                               onClick={() => handle_result_click(`/products/${product.id}`)}
                               className="w-full flex items-center gap-3 sm:gap-4 p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-curated-bg-light transition-colors text-left"
                             >
-                              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-curated-bg rounded-lg flex items-center justify-center flex-shrink-0">
-                                <span className="text-[9px] sm:text-[10px] text-curated-text-muted">{product.category}</span>
+                              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center p-1.5">
+                                <img
+                                  src={product.image}
+                                  alt={product.name}
+                                  className="w-full h-full object-contain"
+                                />
                               </div>
                               <div className="flex-1 min-w-0">
                                 <p className="text-[13px] sm:text-[14px] font-medium text-curated-text truncate">{product.name}</p>

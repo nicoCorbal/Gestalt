@@ -19,8 +19,8 @@ export const monthly_featured_products = [
     },
     specs: {
       chip: "Apple H2",
-      noise_cancellation: "Adaptativa 2x",
-      battery: "6h (30h con estuche)"
+      cancelación: "Adaptativa 2x",
+      batería: "6h (30h con estuche)"
     }
   },
   {
@@ -42,8 +42,8 @@ export const monthly_featured_products = [
     },
     specs: {
       drivers: "30mm fibra carbono",
-      battery: "30 horas",
-      weight: "250g"
+      batería: "30 horas",
+      peso: "250g"
     }
   },
   {
@@ -64,8 +64,8 @@ export const monthly_featured_products = [
       craft_story: "Acero inoxidable 18/8 reciclado. Libre de BPA. Apto para lavavajillas. Garantía de por vida. Colores de edición limitada que se agotan en minutos."
     },
     specs: {
-      capacity: "40oz (1.18L)",
-      retention: "11h frío / 7h caliente",
+      capacidad: "40oz (1.18L)",
+      retención: "11h frío / 7h caliente",
       material: "Acero 18/8"
     }
   },
@@ -88,8 +88,8 @@ export const monthly_featured_products = [
     },
     specs: {
       material: "Gore-Tex + malla técnica",
-      sole: "Contagrip MA",
-      features: "Quicklace, impermeables"
+      suela: "Contagrip MA",
+      características: "Quicklace, impermeables"
     }
   },
   {
@@ -110,9 +110,9 @@ export const monthly_featured_products = [
       craft_story: "Pantalla Carta 1200 de E Ink. 8GB o 32GB de almacenamiento. USB-C. Audible integrado con Bluetooth. Hecho con 60% de plástico reciclado post-consumo."
     },
     specs: {
-      screen: "6.8\" E-ink 300ppi",
-      storage: "8GB / 32GB",
-      battery: "10 semanas"
+      pantalla: "6.8\" E-ink 300ppi",
+      almacenamiento: "8GB / 32GB",
+      batería: "10 semanas"
     }
   },
   {
@@ -134,8 +134,8 @@ export const monthly_featured_products = [
     },
     specs: {
       chip: "Apple S9",
-      display: "OLED Always-On",
-      features: "ECG, SpO2, Temperatura"
+      pantalla: "OLED Always-On",
+      funciones: "ECG, SpO2, Temperatura"
     }
   },
   {
@@ -157,8 +157,8 @@ export const monthly_featured_products = [
     },
     specs: {
       sensor: "8000 DPI",
-      battery: "70 días",
-      connectivity: "Bluetooth + USB"
+      batería: "70 días",
+      conectividad: "Bluetooth + USB"
     }
   },
   {
@@ -179,9 +179,9 @@ export const monthly_featured_products = [
       craft_story: "Diseñada en Canadá. Costuras selladas. Cremalleras YKK impermeables. La marca que visten alpinistas profesionales y arquitectos por igual. Garantía de por vida."
     },
     specs: {
-      insulation: "Coreloft 60g",
-      weight: "340g",
-      features: "Packable, transpirable"
+      aislamiento: "Coreloft 60g",
+      peso: "340g",
+      características: "Packable, transpirable"
     }
   },
   {
@@ -202,8 +202,8 @@ export const monthly_featured_products = [
       craft_story: "Diseño estadounidense. 12 años de garantía. 90% reciclable al final de su vida. Tres tallas (A, B, C) para diferentes cuerpos. La inversión que protege tu espalda durante décadas."
     },
     specs: {
-      warranty: "12 años",
-      adjustments: "Lumbar, brazos 4D, altura, reclinación",
+      garantía: "12 años",
+      ajustes: "Lumbar, brazos 4D, altura, reclinación",
       material: "Pellicle mesh 8Z"
     }
   },
@@ -225,9 +225,9 @@ export const monthly_featured_products = [
       craft_story: "Nylon resistente al agua. Cremalleras YKK. Forro suave que protege tu laptop. Diseño que conquistó Amazon y r/onebag. La alternativa inteligente a mochilas de $200."
     },
     specs: {
-      capacity: "24L",
+      capacidad: "24L",
       laptop: "Hasta 15.6\"",
-      features: "Pasacables, resistente al agua"
+      características: "Pasacables, resistente al agua"
     }
   },
   {
@@ -248,9 +248,9 @@ export const monthly_featured_products = [
       craft_story: "Hierro fundido en arena. Esmaltado a mano. Cada pieza pasa por 30 manos. Garantía de por vida. El Flame Orange original de 1925 sigue en producción."
     },
     specs: {
-      capacity: "5.5 qt",
+      capacidad: "5.5 qt",
       material: "Hierro fundido esmaltado",
-      origin: "Francia"
+      origen: "Francia"
     }
   },
   {
@@ -271,9 +271,9 @@ export const monthly_featured_products = [
       craft_story: "Tinta de gel de baja viscosidad. Cuerpo de polipropileno reciclable. Hecho en Japón. El producto más vendido de Muji a nivel mundial. El secreto mejor guardado de la papelería."
     },
     specs: {
-      tip: "0.38mm",
-      ink: "Gel",
-      colors: "Negro, azul, rojo"
+      punta: "0.38mm",
+      tinta: "Gel",
+      colores: "Negro, azul, rojo"
     }
   }
 ];
@@ -292,9 +292,9 @@ export const regular_products = [
     image: "/productos/airtag.jpg",
     description: "Localizador de precisión con Ultra Wideband. Red Find My de mil millones de dispositivos. Batería de un año reemplazable. Para nunca perder lo importante.",
     specs: {
-      battery: "1 año (CR2032)",
-      precision: "Ultra Wideband",
-      water_resistance: "IP67"
+      batería: "1 año (CR2032)",
+      precisión: "Ultra Wideband",
+      resistencia: "IP67"
     }
   },
   {
@@ -310,8 +310,8 @@ export const regular_products = [
     description: "El minimalismo escandinavo en forma de hoodie. Algodón orgánico, corte oversized, y el icónico parche Face. Acne Studios define el lujo silencioso desde Estocolmo.",
     specs: {
       material: "Algodón orgánico 100%",
-      fit: "Oversized",
-      origin: "Portugal"
+      corte: "Oversized",
+      origen: "Portugal"
     }
   },
   {
@@ -326,9 +326,9 @@ export const regular_products = [
     image: "/productos/anker.jpg",
     description: "El powerbank más vendido por algo. 10000mAh en tamaño compacto. PowerIQ para carga optimizada. Más de 50 millones de unidades vendidas.",
     specs: {
-      capacity: "10000mAh",
-      output: "12W",
-      weight: "180g"
+      capacidad: "10000mAh",
+      salida: "12W",
+      peso: "180g"
     }
   },
   {
@@ -344,7 +344,7 @@ export const regular_products = [
     description: "El jean parisino por excelencia. Denim japonés raw que se moldea a tu cuerpo con el uso. Sin lavado, sin distressing artificial. La paciencia recompensada con fades únicos.",
     specs: {
       denim: "Japonés 14oz raw",
-      fit: "Slim tapered",
+      corte: "Slim tapered",
       selvedge: "Sí"
     }
   },
@@ -360,9 +360,9 @@ export const regular_products = [
     image: "/productos/jbl.jpg",
     description: "Speaker Bluetooth portátil con IP67. 12 horas de batería. PartyBoost para conectar múltiples speakers. Bass potente en formato compacto.",
     specs: {
-      battery: "12 horas",
-      waterproof: "IP67",
-      connectivity: "Bluetooth 5.1"
+      batería: "12 horas",
+      resistencia: "IP67",
+      conectividad: "Bluetooth 5.1"
     }
   },
   {
@@ -378,8 +378,8 @@ export const regular_products = [
     description: "Las gafas que usó medio Hollywood. Diseño de 1956 que nunca pasó de moda. Acetato italiano. Lentes de cristal. El ícono atemporal.",
     specs: {
       material: "Acetato italiano",
-      lenses: "Cristal G-15",
-      model: "Original Wayfarer"
+      lentes: "Cristal G-15",
+      modelo: "Original Wayfarer"
     }
   },
   {
@@ -394,9 +394,9 @@ export const regular_products = [
     image: "/productos/notebook.jpg",
     description: "El cuaderno de Hemingway, Picasso y Chatwin. Pasta dura, elástico, bolsillo interior, papel marfil 70g. El compañero de ideas desde hace dos siglos.",
     specs: {
-      pages: "240",
-      paper: "70g/m² sin ácido",
-      binding: "Cosido"
+      páginas: "240",
+      papel: "70g/m² sin ácido",
+      encuadernación: "Cosido"
     }
   },
   {
@@ -412,8 +412,8 @@ export const regular_products = [
     description: "El accesorio que eleva cualquier outfit. Diseño reconocible, materiales premium, y ese toque de lujo accesible que define a Guess desde los 80s.",
     specs: {
       material: "Piel sintética premium",
-      style: "Crossbody",
-      origin: "Diseño USA"
+      estilo: "Crossbody",
+      origen: "Diseño USA"
     }
   }
 ];
