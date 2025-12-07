@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -10,11 +10,11 @@ const ProductCard = ({ product }) => {
       to={`/products/${product.id}`}
       className="group bg-white rounded-2xl overflow-hidden"
       layout
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 20 }}
-      whileHover={{ y: -4, boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)' }}
-      transition={{ duration: 0.2 }}
+      exit={{ opacity: 0, y: 16 }}
+      whileHover={{ y: -2, boxShadow: '0 8px 24px -4px rgb(0 0 0 / 0.08)' }}
+      transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
       aria-label={`Ver ${product.name} - $${product.price}`}
     >
       <div className="relative aspect-square bg-white overflow-hidden">
@@ -23,15 +23,15 @@ const ProductCard = ({ product }) => {
             src={product.image}
             alt={product.name}
             loading="lazy"
-            className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-contain p-4 group-hover:scale-[1.02] transition-transform duration-300"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-curated-bg">
             <span className="text-curated-text-muted text-[14px] text-center px-4">{product.name}</span>
           </div>
         )}
-        <div className="absolute top-4 right-4 w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
-          <ExternalLink className="w-[18px] h-[18px] text-curated-text-secondary" />
+        <div className="absolute top-4 right-4 w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <ArrowUpRight className="w-[18px] h-[18px] text-curated-text-secondary" />
         </div>
       </div>
 

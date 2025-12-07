@@ -116,19 +116,20 @@ const Navigation = () => {
               <NavLink to="/browse" isActive={location.pathname === '/browse' || location.pathname.startsWith('/collections')}>Explorar</NavLink>
               <NavLink to="/comparar" isActive={location.pathname === '/comparar'}>Comparar</NavLink>
               <NavLink to="/blog" isActive={location.pathname.startsWith('/blog')}>Blog</NavLink>
+              <NavLink to="/info" isActive={location.pathname === '/info'}>Filosofía</NavLink>
             </div>
 
             {/* Right side buttons */}
             <div className="flex items-center gap-2 z-50">
               <motion.button
-                className="p-2 rounded-lg flex items-center gap-2"
+                className="p-2 rounded-lg flex items-center gap-2 group"
                 whileHover={{ backgroundColor: 'rgba(255,255,255,1)' }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.15 }}
                 onClick={() => set_is_search_open(true)}
                 aria-label="Buscar (Ctrl+K)"
               >
-                <Search className="w-5 h-5 text-curated-text-muted" />
+                <Search className="w-5 h-5 text-curated-text-muted group-hover:text-curated-text transition-colors duration-200" />
                 <span className="hidden sm:inline text-[12px] text-curated-text-muted border border-curated-border rounded px-1.5 py-0.5">
                   ⌘K
                 </span>
@@ -191,10 +192,11 @@ const Navigation = () => {
                     { to: '/', label: 'Inicio', isActive: location.pathname === '/' },
                     { to: '/browse', label: 'Explorar', isActive: location.pathname === '/browse' },
                     { to: '/comparar', label: 'Comparar', isActive: location.pathname === '/comparar' },
-                    { to: '/blog', label: 'Blog', isActive: location.pathname.startsWith('/blog') }
+                    { to: '/blog', label: 'Blog', isActive: location.pathname.startsWith('/blog') },
+                    { to: '/info', label: 'Filosofía', isActive: location.pathname === '/info' }
                   ].map((link, index) => (
                     <motion.div
-                      key={link.to}
+                      key={link.label}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.2, delay: 0.05 * index }}
@@ -268,15 +270,25 @@ const Navigation = () => {
                     {/* Products */}
                     {search_results.products.length > 0 && (
                       <div className="p-3 sm:p-4">
-                        <p className="text-[11px] sm:text-[12px] text-curated-text-muted uppercase tracking-wide mb-2 sm:mb-3">Productos</p>
+                        <motion.p
+                          className="text-[11px] sm:text-[12px] text-curated-text-muted uppercase tracking-wide mb-2 sm:mb-3"
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          Productos
+                        </motion.p>
                         <div className="space-y-1 sm:space-y-2">
-                          {search_results.products.map((product) => (
-                            <button
+                          {search_results.products.map((product, index) => (
+                            <motion.button
                               key={product.id}
                               onClick={() => handle_result_click(`/products/${product.id}`)}
-                              className="w-full flex items-center gap-3 sm:gap-4 p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-curated-bg-light transition-colors text-left"
+                              className="w-full flex items-center gap-3 sm:gap-4 p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-curated-bg-light text-left group transition-colors duration-150"
+                              initial={{ opacity: 0, y: 8 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.2, delay: index * 0.03 }}
                             >
-                              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center p-1.5">
+                              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center p-1.5 border border-curated-border">
                                 <img
                                   src={product.image}
                                   alt={product.name}
@@ -284,10 +296,10 @@ const Navigation = () => {
                                 />
                               </div>
                               <div className="flex-1 min-w-0">
-                                <p className="text-[13px] sm:text-[14px] font-medium text-curated-text truncate">{product.name}</p>
+                                <p className="text-[13px] sm:text-[14px] font-medium text-curated-text truncate group-hover:text-curated-text-secondary transition-colors duration-150">{product.name}</p>
                                 <p className="text-[12px] sm:text-[13px] text-curated-text-muted">{product.brand} · ${product.price}</p>
                               </div>
-                            </button>
+                            </motion.button>
                           ))}
                         </div>
                       </div>
@@ -296,19 +308,29 @@ const Navigation = () => {
                     {/* Blog posts */}
                     {search_results.posts.length > 0 && (
                       <div className="p-3 sm:p-4 border-t border-curated-border">
-                        <p className="text-[11px] sm:text-[12px] text-curated-text-muted uppercase tracking-wide mb-2 sm:mb-3">Artículos</p>
+                        <motion.p
+                          className="text-[11px] sm:text-[12px] text-curated-text-muted uppercase tracking-wide mb-2 sm:mb-3"
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.2, delay: 0.1 }}
+                        >
+                          Artículos
+                        </motion.p>
                         <div className="space-y-1 sm:space-y-2">
-                          {search_results.posts.map((post) => (
-                            <button
+                          {search_results.posts.map((post, index) => (
+                            <motion.button
                               key={post.id}
                               onClick={() => handle_result_click(`/blog/${post.slug}`)}
-                              className="w-full flex items-center gap-3 sm:gap-4 p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-curated-bg-light transition-colors text-left"
+                              className="w-full flex items-center gap-3 sm:gap-4 p-2 sm:p-3 rounded-lg sm:rounded-xl text-left group hover:bg-curated-bg-light transition-colors duration-150"
+                              initial={{ opacity: 0, y: 8 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.2, delay: 0.1 + index * 0.03 }}
                             >
                               <div className="flex-1 min-w-0">
-                                <p className="text-[13px] sm:text-[14px] font-medium text-curated-text truncate">{post.title}</p>
+                                <p className="text-[13px] sm:text-[14px] font-medium text-curated-text truncate group-hover:text-curated-text-secondary transition-colors duration-150">{post.title}</p>
                                 <p className="text-[12px] sm:text-[13px] text-curated-text-muted">{post.category} · {post.reading_time} min</p>
                               </div>
-                            </button>
+                            </motion.button>
                           ))}
                         </div>
                       </div>

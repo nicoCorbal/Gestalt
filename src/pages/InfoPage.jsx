@@ -40,9 +40,9 @@ const InfoPage = () => {
           <div className="mb-12 md:mb-16">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-curated-text-muted hover:text-curated-text mb-8 transition-colors text-[14px]"
+              className="inline-flex items-center gap-2 text-curated-text-muted hover:text-curated-text mb-8 transition-colors duration-200 text-[14px] group"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform duration-200" />
               Volver al inicio
             </Link>
 
@@ -100,12 +100,20 @@ const InfoPage = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {principles.map((principle, index) => (
-                <div key={index}>
-                  <h3 className="text-[16px] sm:text-[17px] font-medium text-curated-text mb-2">{principle.name}</h3>
+                <motion.div
+                  key={index}
+                  className="group p-4 -m-4 rounded-xl hover:bg-curated-bg-light/50 transition-colors duration-200 cursor-default"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.15 + index * 0.04, ease: [0.25, 0.1, 0.25, 1] }}
+                >
+                  <h3 className="text-[16px] sm:text-[17px] font-medium text-curated-text mb-2 group-hover:text-curated-text-secondary transition-colors duration-200">
+                    {principle.name}
+                  </h3>
                   <p className="text-[14px] sm:text-[15px] text-curated-text-muted leading-relaxed">
                     {principle.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
@@ -119,10 +127,10 @@ const InfoPage = () => {
           >
             <Link
               to="/browse"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-curated-text text-white rounded-full hover:bg-opacity-90 transition-all font-medium text-[14px] sm:text-[15px]"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-curated-text text-white rounded-full shadow-md hover:shadow-lg hover:bg-curated-text/90 active:scale-[0.98] transition-all duration-200 font-medium text-[14px] sm:text-[15px] group"
             >
               Explorar colecciones
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" />
             </Link>
           </motion.div>
 

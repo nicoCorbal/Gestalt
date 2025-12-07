@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight, User, Clock } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { blog_posts } from '../data/blog_posts';
 import PageTransition from '../components/PageTransition';
+
+const MotionLink = motion.create(Link);
 
 const BlogPage = () => {
   return (
@@ -56,10 +59,10 @@ const BlogPage = () => {
                 </div>
                 <Link
                   to={`/blog/${blog_posts[0].slug}`}
-                  className="flex items-center gap-2 text-curated-text font-medium text-[13px] sm:text-[14px] hover:text-curated-text-muted transition-colors"
+                  className="inline-flex items-center gap-2 text-curated-text font-medium text-[13px] sm:text-[14px] hover:text-curated-text-secondary transition-colors duration-200 group/link"
                 >
                   <span>Leer más</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform duration-200" />
                 </Link>
               </div>
             </div>
@@ -75,11 +78,14 @@ const BlogPage = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {blog_posts.slice(1).map((post) => (
-            <Link
+          {blog_posts.slice(1).map((post, index) => (
+            <MotionLink
               key={post.id}
               to={`/blog/${post.slug}`}
-              className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+              className="group bg-white rounded-2xl overflow-hidden hover:shadow-md transition-shadow duration-300"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, delay: index * 0.05, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <div className="relative aspect-[16/9] overflow-hidden bg-curated-bg"></div>
               <div className="p-5 sm:p-6">
@@ -92,7 +98,7 @@ const BlogPage = () => {
                     <span>{post.reading_time} min</span>
                   </div>
                 </div>
-                <h3 className="text-[17px] sm:text-[18px] font-bold text-curated-text mb-2 leading-tight transition-colors">
+                <h3 className="text-[17px] sm:text-[18px] font-bold text-curated-text mb-2 leading-tight group-hover:text-curated-text-secondary transition-colors duration-200">
                   {post.title}
                 </h3>
                 <p className="text-[13px] sm:text-[14px] text-curated-text-muted leading-relaxed mb-4">
@@ -103,7 +109,7 @@ const BlogPage = () => {
                   <span>{post.date}</span>
                 </div>
               </div>
-            </Link>
+            </MotionLink>
           ))}
         </div>
       </div>

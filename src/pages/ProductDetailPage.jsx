@@ -41,9 +41,9 @@ const ProductDetailPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-curated-text-muted hover:text-curated-text mb-6 sm:mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-curated-text-muted hover:text-curated-text mb-6 sm:mb-8 transition-colors duration-200 group"
           >
-            <ArrowLeft className="w-5 h-5" />
+            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform duration-200" />
             Volver
           </Link>
 
@@ -88,13 +88,15 @@ const ProductDetailPage = () => {
                   ${product.price.toLocaleString()}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-curated-text text-white px-8 py-4 rounded-full hover:bg-opacity-90 transition-all font-medium shadow-lg">
-                    Ver producto
-                    <ExternalLink className="w-4 h-4" />
+                  <button
+                    className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-curated-text text-white px-8 py-4 rounded-full font-medium shadow-md hover:shadow-lg hover:bg-curated-text/90 active:scale-[0.98] transition-all duration-200 group"
+                  >
+                    <span>Ver producto</span>
+                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
                   </button>
                   <Link
                     to={`/comparar?producto=${product.id}`}
-                    className="flex items-center justify-center gap-2 px-6 py-4 border border-curated-border rounded-full text-curated-text-muted hover:text-curated-text hover:border-curated-text transition-all font-medium"
+                    className="flex items-center justify-center gap-2 px-6 py-4 border border-curated-border rounded-full text-curated-text-muted hover:text-curated-text hover:border-curated-text/50 hover:bg-curated-bg-light/50 active:scale-[0.98] transition-all duration-200 font-medium group"
                   >
                     <GitCompare className="w-4 h-4" />
                     Comparar

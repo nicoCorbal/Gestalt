@@ -106,13 +106,13 @@ const HeroSection = () => {
 
           {/* Producto del día */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -12 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.4, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <Link
               to={`/products/${product.id}`}
-              className="group block bg-white rounded-2xl border border-curated-border p-4 md:p-6 hover:shadow-lg hover:border-curated-text-muted transition-all h-full"
+              className="group block bg-white rounded-2xl border border-curated-border p-4 md:p-6 hover:shadow-md hover:border-curated-text/20 transition-all duration-200 h-full"
             >
               {/* Header con badge */}
               <div className="flex items-center justify-between mb-3 md:mb-4">
@@ -139,7 +139,7 @@ const HeroSection = () => {
                       src={product.image}
                       alt={product.name}
                       loading="eager"
-                      className="w-full h-full object-contain p-1.5 md:p-2 group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain p-1.5 md:p-2 group-hover:scale-[1.02] transition-transform duration-300"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
@@ -162,7 +162,7 @@ const HeroSection = () => {
                     <span className="text-[13px] md:text-[15px] font-semibold text-curated-text">
                       ${product.price.toLocaleString()}
                     </span>
-                    <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-curated-text-muted opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                    <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-curated-text-muted opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200" />
                   </div>
                 </div>
               </div>

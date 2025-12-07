@@ -1,53 +1,67 @@
 import { Link } from 'react-router-dom';
-import { Home, Search } from 'lucide-react';
+import { motion } from 'framer-motion';
 import PageTransition from '../components/PageTransition';
 
 const NotFoundPage = () => {
   return (
     <PageTransition>
-      <div className="min-h-screen bg-curated-bg-light flex items-center justify-center px-6">
-        <div className="max-w-[600px] text-center">
-          <div className="mb-6 sm:mb-8">
-            <div className="text-[80px] sm:text-[120px] md:text-[180px] font-bold text-curated-text leading-none tracking-tighter">
-              404
-            </div>
-            <div className="h-px bg-curated-border my-6 sm:my-8"></div>
+      <div className="min-h-screen bg-curated-bg-light flex items-center justify-center px-4 sm:px-6">
+        <div className="max-w-[500px] w-full text-center">
+
+          {/* Formas descompuestas */}
+          <div className="relative h-[140px] sm:h-[180px] mb-10 flex items-center justify-center">
+            <motion.div
+              className="absolute w-14 h-14 sm:w-16 sm:h-16 bg-curated-text rounded-2xl"
+              initial={{ x: 0, y: 0, rotate: 0, opacity: 0 }}
+              animate={{ x: -50, y: -20, rotate: -12, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+            />
+            <motion.div
+              className="absolute w-12 h-12 sm:w-14 sm:h-14 bg-curated-text/50 rounded-full"
+              initial={{ x: 0, y: 0, opacity: 0 }}
+              animate={{ x: 45, y: -30, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
+            />
+            <motion.div
+              className="absolute w-10 h-10 sm:w-12 sm:h-12 border-2 border-curated-text/40 rounded-xl"
+              initial={{ x: 0, y: 0, rotate: 0, opacity: 0 }}
+              animate={{ x: -30, y: 35, rotate: 15, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+            />
+            <motion.div
+              className="absolute w-8 h-8 sm:w-10 sm:h-10 bg-curated-text/25 rounded-full"
+              initial={{ x: 0, y: 0, opacity: 0 }}
+              animate={{ x: 55, y: 25, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+            />
           </div>
 
-          <h1 className="text-[24px] sm:text-[32px] md:text-[48px] font-bold text-curated-text mb-4 sm:mb-6 leading-tight tracking-tight">
-            Página no encontrada
-          </h1>
+          {/* Contenido */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <p className="text-[12px] sm:text-[13px] text-curated-text-muted uppercase tracking-wider mb-4">
+              Error 404
+            </p>
 
-          <p className="text-[14px] sm:text-[16px] md:text-[18px] text-curated-text-muted mb-8 sm:mb-12 leading-relaxed">
-            La página que buscas no existe o ha sido movida.
-            <br />
-            Volvamos al camino correcto.
-          </p>
+            <h1 className="text-[28px] sm:text-[36px] md:text-[42px] font-medium text-curated-text mb-3 leading-tight tracking-[-0.01em]">
+              El todo se ha perdido.
+            </h1>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <p className="text-[15px] sm:text-[16px] text-curated-text-muted mb-8">
+              Aquí solo quedan las partes.
+            </p>
+
             <Link
               to="/"
-              className="flex items-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 bg-curated-text text-white rounded-full hover:bg-opacity-90 transition-all shadow-lg font-medium text-[14px] sm:text-[15px] w-full sm:w-auto justify-center"
-              aria-label="Ir al inicio"
+              className="inline-flex items-center px-6 py-3 bg-curated-text text-white rounded-full shadow-md hover:shadow-lg hover:bg-curated-text/90 active:scale-[0.98] transition-all duration-200 font-medium text-[14px]"
             >
-              <Home className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span>Ir al inicio</span>
+              Volver al orden
             </Link>
-            <Link
-              to="/browse"
-              className="flex items-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 bg-white border-2 border-curated-border text-curated-text rounded-full hover:border-curated-text transition-colors font-bold uppercase tracking-wide text-[13px] sm:text-[14px] w-full sm:w-auto justify-center"
-              aria-label="Explorar productos"
-            >
-              <Search className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span>Explorar</span>
-            </Link>
-          </div>
+          </motion.div>
 
-          <div className="mt-10 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-4 max-w-[300px] sm:max-w-[400px] mx-auto opacity-20">
-            <div className="aspect-square bg-curated-border rounded-2xl"></div>
-            <div className="aspect-square bg-curated-border rounded-full"></div>
-            <div className="aspect-square bg-curated-border rounded-2xl"></div>
-          </div>
         </div>
       </div>
     </PageTransition>

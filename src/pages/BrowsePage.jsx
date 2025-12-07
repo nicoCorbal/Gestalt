@@ -4,6 +4,8 @@ import { collections, products } from '../data/products';
 import { ArrowRight } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 
+const MotionLink = motion.create(Link);
+
 // Obtener imagen aleatoria de una colección
 const get_collection_image = (collection) => {
   const collection_products = collection.product_ids
@@ -44,14 +46,17 @@ const BrowsePage = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {collections.map((collection) => {
+          {collections.map((collection, index) => {
             const cover_image = get_collection_image(collection);
 
             return (
-              <Link
+              <MotionLink
                 key={collection.id}
                 to={`/collections/${collection.id}`}
-                className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="group bg-white rounded-2xl overflow-hidden hover:shadow-md transition-shadow duration-300"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: index * 0.05, ease: [0.25, 0.1, 0.25, 1] }}
               >
                 <div className="relative aspect-[16/9] bg-white overflow-hidden">
                   {cover_image ? (
@@ -59,7 +64,7 @@ const BrowsePage = () => {
                       src={cover_image}
                       alt={collection.name}
                       loading="lazy"
-                      className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain p-6 group-hover:scale-[1.02] transition-transform duration-300"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-curated-bg to-curated-bg-light">
@@ -72,7 +77,7 @@ const BrowsePage = () => {
                 </div>
 
                 <div className="p-5 sm:p-6">
-                  <h3 className="text-[18px] sm:text-[20px] font-bold text-curated-text mb-2 leading-tight transition-colors">
+                  <h3 className="text-[18px] sm:text-[20px] font-bold text-curated-text mb-2 leading-tight group-hover:text-curated-text-secondary transition-colors duration-200">
                     {collection.name}
                   </h3>
                   <p className="text-[13px] sm:text-[14px] text-curated-text-muted leading-relaxed mb-4">
@@ -80,10 +85,10 @@ const BrowsePage = () => {
                   </p>
                   <div className="flex items-center gap-2 text-curated-text font-medium text-[12px] sm:text-[13px] uppercase tracking-wide">
                     <span>Explorar</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" />
                   </div>
                 </div>
-              </Link>
+              </MotionLink>
             );
           })}
         </div>
@@ -100,7 +105,7 @@ const BrowsePage = () => {
           </p>
           <Link
             to="/"
-            className="inline-block px-8 py-4 bg-curated-text text-white text-[14px] sm:text-[15px] font-medium rounded-full hover:bg-opacity-90 transition-all shadow-lg"
+            className="inline-block px-8 py-4 bg-curated-text text-white text-[14px] sm:text-[15px] font-medium rounded-full shadow-md hover:shadow-lg hover:bg-curated-text/90 active:scale-[0.98] transition-all duration-200"
           >
             Suscribirse ahora
           </Link>
