@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Clock, Mail, ChevronDown } from 'lucide-react';
@@ -14,8 +14,18 @@ const HeroSection = () => {
   const [is_subscribed, set_is_subscribed] = useState(false);
   const [time_left, set_time_left] = useState({ hours: 0, minutes: 0 });
   const [newsletter_open, set_newsletter_open] = useState(false);
+  const video_ref = useRef(null);
 
   const product = get_daily_product();
+
+  // Video se reproduce al cargar y al pasar el ratón
+  const handle_mouse_enter = () => {
+    const video = video_ref.current;
+    if (video) {
+      video.currentTime = 0;
+      video.play();
+    }
+  };
 
   // Contador hasta medianoche
   useEffect(() => {
@@ -67,8 +77,17 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <span>Curated by</span>
-            <img src="/GestaltNBG.png" alt="Gestalt" className="h-[56px] md:h-[90px] inline-block" />
+            <span className="hidden md:inline">Curated by</span>
+            <span onMouseEnter={handle_mouse_enter} onTouchStart={handle_mouse_enter} className="inline-block align-middle">
+              <video
+                ref={video_ref}
+                src="/video2.mp4"
+                autoPlay
+                muted
+                playsInline
+                className="h-[130px] md:h-[150px]"
+              />
+            </span>
           </motion.h1>
           <motion.p
             className="text-[13px] md:text-[16px] text-curated-text-muted leading-relaxed max-w-[500px] mx-auto"
